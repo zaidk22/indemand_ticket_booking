@@ -14,6 +14,8 @@ static TextStyle buttonTextStyle = GoogleFonts.monda(
 
     static TextStyle lableTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white);
+    static TextStyle subtitleTextStyle = GoogleFonts.monda(
+    fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white38);
 
         static TextStyle titleTextStyle = GoogleFonts.monda(
     fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white);

@@ -7,7 +7,10 @@ import 'package:indemand_ticket_booking/presentation/core/constants/dimension_co
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
-  const HomeAppBar({super.key});
+  const HomeAppBar({super.key,required this.title});
+
+
+  final title;
 
 
 
@@ -22,7 +25,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
       backgroundColor: CustomColor.appBackbroundColor,
       //leading: Image.asset(ImageConstant.authLogoImage),
 
-      title:  Text("Home",style: CustomTextStyle.titleTextStyle,),
+      title:  Text(title,style: CustomTextStyle.titleTextStyle,),
       actions: [
         IconButton(
           onPressed: () {

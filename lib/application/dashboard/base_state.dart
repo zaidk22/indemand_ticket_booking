@@ -10,6 +10,6 @@ class BaseState with _$BaseState {
 
   factory BaseState.intial() => const BaseState(
         isLoading: false,
-        selectedNavBarIndex: 0,
+        selectedNavBarIndex: 3,
       );
 }

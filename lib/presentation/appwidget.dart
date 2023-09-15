@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:indemand_ticket_booking/application/bottom_nav_bar/base_bloc.dart';
 import 'package:indemand_ticket_booking/injection.dart';
+import '../application/dashboard/base_bloc.dart';
 import 'routes/routes.dart';
 
 

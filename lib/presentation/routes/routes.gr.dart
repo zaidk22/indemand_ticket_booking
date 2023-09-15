@@ -11,7 +11,7 @@
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:indemand_ticket_booking/presentation/pages/auth/auth_page.dart'
     as _i1;
-import 'package:indemand_ticket_booking/presentation/pages/home/home_page.dart'
+import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/dashboard_page.dart'
     as _i2;
 import 'package:indemand_ticket_booking/presentation/pages/splash/splash_page.dart'
     as _i3;
@@ -27,10 +27,10 @@ abstract class $AppRouter extends _i4.RootStackRouter {
         child: const _i1.AuthPage(),
       );
     },
-    HomeRoute.name: (routeData) {
+    DashBoard.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.HomePage(),
+        child: const _i2.DashBoard(),
       );
     },
     SplashRoute.name: (routeData) {
@@ -57,15 +57,15 @@ class AuthRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.HomePage]
-class HomeRoute extends _i4.PageRouteInfo<void> {
-  const HomeRoute({List<_i4.PageRouteInfo>? children})
+/// [_i2.DashBoard]
+class DashBoard extends _i4.PageRouteInfo<void> {
+  const DashBoard({List<_i4.PageRouteInfo>? children})
       : super(
-          HomeRoute.name,
+          DashBoard.name,
           initialChildren: children,
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'DashBoard';
 
   static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
 }
