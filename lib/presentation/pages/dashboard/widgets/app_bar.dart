@@ -25,7 +25,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
       backgroundColor: CustomColor.appBackbroundColor,
       //leading: Image.asset(ImageConstant.authLogoImage),
 
-      title:  Text(title,style: CustomTextStyle.titleTextStyle,),
+      title:  Text(title,style: CustomTextStyle.appTitleTextStyle,),
       actions: [
         IconButton(
           onPressed: () {

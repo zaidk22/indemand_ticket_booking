@@ -18,6 +18,7 @@ class MyAccountsPage extends StatelessWidget {
          children: [
            Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
             children: [
               
              Container(

@@ -8,7 +8,8 @@ class CustomTextStyle{
 static TextStyle splashText = GoogleFonts.monda(
     fontSize: 34, fontWeight: FontWeight.w500, color: Colors.white);
 
-
+static TextStyle appTitleTextStyle = GoogleFonts.podkova(
+    fontSize: 24, fontWeight: FontWeight.w500, color: Colors.white);
 static TextStyle buttonTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: CustomColor.authBackbroundColor1);
 
@@ -16,6 +17,8 @@ static TextStyle buttonTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white);
     static TextStyle subtitleTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white38);
+      static TextStyle subtitleBlackTextStyle = GoogleFonts.monda(
+    fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
 
         static TextStyle titleTextStyle = GoogleFonts.monda(
     fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white);

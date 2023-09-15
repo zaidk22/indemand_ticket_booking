@@ -33,14 +33,19 @@ class InfoCard extends StatelessWidget {
                  const SizedBox(width: 20,),
                 Icon(icon,color: CustomColor.whiteColor,),
                 const SizedBox(width: 20,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                     Text(title,style: CustomTextStyle.titleTextStyle,),
-                    const SizedBox(height: 2,),
-                    Text(subtitle,style: CustomTextStyle.subtitleTextStyle)
-                  ],
-                )
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                       Text(title,style: CustomTextStyle.titleTextStyle,),
+                      const SizedBox(height: 2,),
+                      Text(subtitle,style: CustomTextStyle.subtitleTextStyle,
+                      maxLines: 2,
+                      )
+                    ],
+                  ),
+                ),
+                  const SizedBox(width: 5,),
               ],
             ),
           ),

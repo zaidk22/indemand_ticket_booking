@@ -10,6 +10,8 @@ static const String authLogoImage = "assets/images/logo_landscape.png";
 static const String loginLogo = "assets/images/login_logo.png";
 
 
+static const String dummyCardImg = "assets/images/dummy_card_image.png";
+static const String dummyLocationImg = "assets/images/location.png";
 static const String splashBackgroundImage = "assets/images/back.png";
 static const groupImage = "assets/images/group.png";
 static const timeImage = "assets/images/time.png";
