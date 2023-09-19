@@ -19,7 +19,8 @@ static TextStyle buttonTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white38);
       static TextStyle subtitleBlackTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
-
+    static TextStyle subtitleBlackMinTextStyle = GoogleFonts.monda(
+    fontSize: 12, fontWeight: FontWeight.w500, color: Colors.black);
         static TextStyle titleTextStyle = GoogleFonts.monda(
     fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white);
 }

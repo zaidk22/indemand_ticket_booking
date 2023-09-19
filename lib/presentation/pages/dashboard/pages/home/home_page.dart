@@ -7,7 +7,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/image_consta
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/latest_events.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/popular_locations.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app_bar.dart';
-import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/dashboard_page.dart';
+import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart';
 
 import 'widgets/most_popular.dart';
 
@@ -53,6 +53,7 @@ class HomePage extends StatelessWidget {
 
            const SizedBox(height: 10,),
            PopularLocations(deviceSize: deviceSize),
+          // MostPopular(deviceSize: deviceSize),
            const SizedBox(height: 10,),
         
         ],

@@ -1,0 +1,125 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
+import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_auth_button.dart';
+import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_form_field.dart';
+import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+
+@RoutePage()
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String buttonLableText = "Login";
+  @override
+  Widget build(BuildContext context) {
+    final deviceSize = MediaQuery.sizeOf(context);
+
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
+        body: SafeArea(
+          child: Container(
+            decoration: const BoxDecoration(
+              color: CustomColor.appBackbroundColor,
+            ),
+            child: SingleChildScrollView(
+              child: SizedBox(
+                height: deviceSize.height,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: deviceSize.height * 0.1,
+                    ),
+                    // Center(
+                    //   child: Image.asset(
+                    //     ImageConstant.loginLogo,
+                    //     width: double.infinity,
+                    //     height: deviceSize.height*0.3,
+                    //   ),
+                    // ),
+                          
+                    Center(
+                      child: Image.asset(
+                        ImageConstant.authLogoImage,
+                        width: deviceSize.width,
+                        height: deviceSize.height * 0.22,
+                      ),
+                    ),
+                          
+                    Container(
+                      height: deviceSize.height*0.45,
+                      child: Card(
+                        
+                        clipBehavior: Clip.none,
+                        //color: CustomColor.authBackbroundColor3,
+                        elevation: 20,
+                          
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const CustomFormField(
+                                hintText: "Username",
+                                prefixIcon: Icons.person,
+                              ),
+                              const SizedBox(height: 5),
+                              const CustomFormField(
+                                hintText: "Password",
+                                prefixIcon: Icons.password,
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              CustomAuthButton(
+                                text: "Sign in",
+                                onTap: () {
+                                  // AutoRouter.of(context).replace(DashBoard());
+                                  AutoRouter.of(context).push(const DashBoard());
+                                },
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              RichText(
+                                text: TextSpan(
+                                    text: 'Don\'t have an account?',
+                                    style: CustomTextStyle.buttonTextStyle,
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: ' Sign up',
+                                          style: const TextStyle(
+                                              color: Colors.blueAccent,
+                                              fontSize: 18),
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              AutoRouter.of(context)
+                                                  .push(const SignUpRoute());
+                                            })
+                                    ]),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                   
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

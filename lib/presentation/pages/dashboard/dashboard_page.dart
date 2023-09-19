@@ -10,9 +10,10 @@ import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_ti
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/search/search_page.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app_bar.dart';
 
-import '../../../../application/dashboard/base_bloc.dart';
+import '../../../application/dashboard/base_bloc.dart';
 
 
+@RoutePage()
 class DashBoard extends StatelessWidget {
   const DashBoard({super.key});
   void _onItemTapped(int value) {
@@ -55,7 +56,7 @@ class DashBoard extends StatelessWidget {
             showSelectedLabels: true,
             currentIndex: state.selectedNavBarIndex,
             selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.black,
+            unselectedItemColor: CustomColor.containerColor,
             onTap: (value) {
               context.read<BaseBloc>().add(BaseEvent.changePage(index: value));
             },

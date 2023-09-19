@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
@@ -62,7 +63,7 @@ class MyAccountsPage extends StatelessWidget {
              },),
                 const SizedBox(height: 20,),
 
-            InfoCard(icon: Icons.person,
+            InfoCard(icon: Icons.movie,
              title: "Tickets",
              subtitle: "All the tickets are stored here",
              onTap: () {
@@ -70,7 +71,7 @@ class MyAccountsPage extends StatelessWidget {
              },),
    const SizedBox(height: 20,),
 
-            InfoCard(icon: Icons.person,
+            InfoCard(icon: Icons.money,
              title: "Refund ",
              subtitle: "All the refund details are stored here ",
              onTap: () {
@@ -78,7 +79,7 @@ class MyAccountsPage extends StatelessWidget {
              },),
    const SizedBox(height: 20,),
 
-            InfoCard(icon: Icons.person,
+            InfoCard(icon: Icons.question_answer,
              title: "FAQ",
              subtitle: "frequently asked questions",
              onTap: () {
@@ -88,7 +89,7 @@ class MyAccountsPage extends StatelessWidget {
            
               const SizedBox(height: 20,),
 
-            InfoCard(icon: Icons.person,
+            InfoCard(icon: Icons.help,
              title: "Help",
              subtitle: "Any questions or issues? We are here to help",
              onTap: () {

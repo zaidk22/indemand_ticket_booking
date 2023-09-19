@@ -15,28 +15,44 @@ class MostPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-       height: deviceSize.height*0.4,
+       height: deviceSize.height*0.35,
      
        child: ListView.builder(
   itemCount: 10,
   scrollDirection: Axis.horizontal,
   itemBuilder: (context, index) {
-    return Container(
-      height: deviceSize.height*0.4,
+
+  
+  return Column(
+    children: [
+      Container(
+            height: deviceSize.height*0.30,
        width: deviceSize.width*0.5,
       margin:const EdgeInsets.symmetric(horizontal: 20),
-    decoration: BoxDecoration(
-     borderRadius: BorderRadius.circular(15),
-      image: const DecorationImage(image: AssetImage(ImageConstant.dummyCardImg)),
-      
-    ),
-    child: Align(
+        child: ClipRRect(
+        
+          borderRadius: BorderRadius.circular(8.0),
+          child: Image.network(
+           ImageConstant.dummyNetworkImage,
+          fit: BoxFit.cover,
+          ),
+      ),
+      ),
+     const SizedBox(height: 2,),
+       Align(
       alignment: Alignment.bottomCenter,
-      child: Text("InDemand Radio",style: CustomTextStyle.titleTextStyle,),
+      child: Text("InDemand Radio",style: CustomTextStyle.titleTextStyle,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      ),
     ),
-    );
+    ],
+  );
+  
   },
 )
      );
+ 
+ 
   }
 }
