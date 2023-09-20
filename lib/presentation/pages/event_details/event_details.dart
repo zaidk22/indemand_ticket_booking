@@ -18,15 +18,16 @@ class EventDetails extends StatelessWidget {
     final deviceSize = MediaQuery.sizeOf(context);
     return SafeArea(
       child: Scaffold(
+       // backgroundColor: CustomColor.eventBackgroundColor,
         appBar: null,
         body: ListView(
           children: [
            EventImageWidget(deviceSize: deviceSize,),
             const SizedBox(height: 10,),
             const EventDetailCard(),
-
+    
                 const SizedBox(height: 10,),
-
+    
                EventTabView(deviceSize: deviceSize),
           ],
         ),

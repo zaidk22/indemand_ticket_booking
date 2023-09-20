@@ -11,7 +11,7 @@ static TextStyle splashText = GoogleFonts.monda(
 static TextStyle appTitleTextStyle = GoogleFonts.podkova(
     fontSize: 24, fontWeight: FontWeight.w500, color: Colors.white);
 static TextStyle buttonTextStyle = GoogleFonts.monda(
-    fontSize: 14, fontWeight: FontWeight.w500, color: CustomColor.authBackbroundColor1);
+    fontSize: 14, fontWeight: FontWeight.w500, color: CustomColor.authBackbgroundColor1);
 
     static TextStyle lableTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white);
@@ -23,6 +23,16 @@ static TextStyle buttonTextStyle = GoogleFonts.monda(
     fontSize: 12, fontWeight: FontWeight.w500, color: Colors.black);
         static TextStyle titleTextStyle = GoogleFonts.monda(
     fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white);
+
+    static TextStyle warningTextStyle = GoogleFonts.monda(
+    fontSize: 12, fontWeight: FontWeight.w500, color: CustomColor.authBackbgroundColor1);
+
+
+      static TextStyle eventtitleTextStyle = GoogleFonts.monda(
+    fontSize: 14, fontWeight: FontWeight.w500, color: CustomColor.titleTextColor);
+          static TextStyle eventsubtitleTextStyle = GoogleFonts.monda(
+    fontSize: 12, fontWeight: FontWeight.w500, color: CustomColor.titleTextColor);
+
 }
 
 

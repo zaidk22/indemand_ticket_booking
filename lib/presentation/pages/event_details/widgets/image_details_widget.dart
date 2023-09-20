@@ -11,7 +11,7 @@ class EventImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-            height: deviceSize.height*0.6,
+            height: deviceSize.height*0.4,
           
              child: Stack(
              children: [
@@ -26,14 +26,14 @@ class EventImageWidget extends StatelessWidget {
                   style: OutlinedButton.styleFrom(
            //  foregroundColor: Colors.white,
              backgroundColor: Colors.transparent, // Text color
-                side: BorderSide(color: Colors.white), 
+                side: const BorderSide(color: Colors.white), 
               // Border color
               ),
 
                 onPressed: () {
                   
                 },
-             icon: Icon(Icons.arrow_back_ios),color: Colors.black,)),
+             icon: const Icon(Icons.arrow_back_ios),color: Colors.black,)),
            
               Positioned(
               right: 10,
@@ -41,12 +41,12 @@ class EventImageWidget extends StatelessWidget {
               child: IconButton.outlined(
                   style: OutlinedButton.styleFrom(
                      backgroundColor: Colors.transparent, // Text color
-                side: BorderSide(color: Colors.white),  // Border color
+                side: const BorderSide(color: Colors.white),  // Border color
               ),
                 onPressed: () {
                   
                 },
-             icon: Icon(Icons.share),color: Colors.black,))
+             icon: const Icon(Icons.share),color: Colors.black,))
              ], 
              ),
            )

@@ -1,25 +1,37 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
+import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
 
 
 @RoutePage()
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+   Future.delayed(Duration(seconds: 2)).then((value) => AutoRouter.of(context).replace( const LoginRoute()));
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.sizeOf(context) ;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: CustomColor.appBackbroundColor,
           image: DecorationImage(
             image:const AssetImage(ImageConstant.splashImage),
             colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.4), BlendMode.dstATop),
+                CustomColor.appBackbroundColor.withOpacity(0.4), BlendMode.dstATop),
             fit: BoxFit.cover,
           ),
         ),

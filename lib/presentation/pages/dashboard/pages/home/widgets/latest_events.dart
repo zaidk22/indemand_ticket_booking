@@ -53,8 +53,8 @@ class LatestEvents extends StatelessWidget {
                     )),
         
                     Positioned(
-                      right: -10,
-                      top: -10,
+                      right: -2,
+                      top: 0,
                       child: IconButton(onPressed: () {
                       
                     }, icon: const Icon(Icons.share_rounded))),

@@ -52,6 +52,8 @@ dependencies:
   slidable_button: ^3.0.0+1
   video_player: ^2.7.2
   webview_flutter: ^4.2.4
+  shimmer: ^3.0.0
+  
 
 dev_dependencies:
   auto_route_generator: ^7.3.1

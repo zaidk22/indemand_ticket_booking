@@ -1,4 +1,5 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/custom_textstyle.dart';
@@ -32,7 +33,8 @@ class MostPopular extends StatelessWidget {
         child: ClipRRect(
         
           borderRadius: BorderRadius.circular(8.0),
-          child: Image.network(
+          child: CachedNetworkImage(
+            imageUrl: 
            ImageConstant.dummyNetworkImage,
           fit: BoxFit.cover,
           ),

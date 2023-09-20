@@ -8,13 +8,13 @@ class InfoCard extends StatelessWidget {
   const InfoCard({super.key,this.onTap,
  required this.icon,
  required this.title,
- required this.subtitle
+ this.subtitle
  
   });
  final VoidCallback ? onTap ;
  final IconData? icon ;
  final String title;
- final String subtitle;
+ final String? subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +36,11 @@ class InfoCard extends StatelessWidget {
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                
                     children: [
                        Text(title,style: CustomTextStyle.titleTextStyle,),
                       const SizedBox(height: 2,),
-                      Text(subtitle,style: CustomTextStyle.subtitleTextStyle,
+                      Text(subtitle ??'',style: CustomTextStyle.subtitleTextStyle,
                       maxLines: 2,
                       )
                     ],

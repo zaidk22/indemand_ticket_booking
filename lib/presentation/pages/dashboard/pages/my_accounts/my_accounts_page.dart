@@ -1,10 +1,12 @@
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_accounts/widgets/info_card.dart';
+import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
 
 class MyAccountsPage extends StatelessWidget {
   const MyAccountsPage({super.key});
@@ -53,8 +55,7 @@ class MyAccountsPage extends StatelessWidget {
                ),
              ),
               
-            const SizedBox(height: 20,),
-
+           
             InfoCard(icon: Icons.person,
              title: "Profile",
              subtitle: "Change profile",
@@ -95,6 +96,17 @@ class MyAccountsPage extends StatelessWidget {
              onTap: () {
               
              },),
+
+                   const SizedBox(height: 20,),
+
+            InfoCard(icon: Icons.logout,
+             title: "Logout",
+             subtitle: "Logout",
+             onTap: () {
+              AutoRouter.of(context).push(LoginRoute());
+             },),
+
+             
              const SizedBox(height: 10,),
              Text("App version 1.0.0 ",style: CustomTextStyle.subtitleTextStyle,)
             ],

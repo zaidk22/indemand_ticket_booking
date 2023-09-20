@@ -17,7 +17,7 @@ class EventDetailCard extends StatelessWidget {
         overflow: TextOverflow.ellipsis,
         ),
        // const SizedBox(height: 2,),
-       Divider(color: Colors.black12,
+       const Divider(color: Colors.black12,
        thickness: 3,
        ),
  IconTextRow(

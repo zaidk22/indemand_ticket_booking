@@ -10,6 +10,7 @@ import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart';
 
 import 'widgets/most_popular.dart';
+import 'widgets/video_player.dart';
 
 
 
@@ -27,13 +28,15 @@ class HomePage extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: [
-
+ const SizedBox(height: 10,),
+            VideoBackgroundScreen(deviceSize: deviceSize),
+                 const SizedBox(height: 10,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text("Most Popular",style: CustomTextStyle.titleTextStyle,)),
-            const SizedBox(height: 10,),
+           
            MostPopular(deviceSize: deviceSize),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 15,),
           
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
