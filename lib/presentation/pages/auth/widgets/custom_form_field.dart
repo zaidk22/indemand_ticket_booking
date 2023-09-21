@@ -12,7 +12,7 @@ class CustomFormField extends StatelessWidget {
   }) : super(key: key);
   final String hintText;
   final List<TextInputFormatter>? inputFormatters;
-  final String? Function(String?)? validator;
+  final String? Function(String?, )? validator;
   final void Function(String?)? onChange;
   final IconData ? prefixIcon;
 
@@ -21,9 +21,13 @@ class CustomFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
+        
         inputFormatters: inputFormatters,
-        validator: validator,
+          validator: (inputString) {
+                return validator?.call(inputString);
+              },
         decoration: InputDecoration(hintText: hintText,
+        label: Text(hintText),
       prefixIcon:   Icon(prefixIcon)  ,
        border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),

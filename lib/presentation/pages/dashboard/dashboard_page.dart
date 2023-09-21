@@ -14,7 +14,7 @@ import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app
 import 'package:upgrader/upgrader.dart';
 
 import '../../../application/dashboard/base_bloc.dart';
-
+import 'widgets/exit_dialog.dart';
 
 @RoutePage()
 class DashBoard extends StatelessWidget {
@@ -36,67 +36,77 @@ class DashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BaseBloc, BaseState>(
       builder: (context, state) {
-        return Scaffold(
-          appBar: HomeAppBar(
-            title: state.selectedNavBarIndex == 0
-                ? "Home"
-                : state.selectedNavBarIndex == 1
-                    ? "Search"
-                    : state.selectedNavBarIndex == 2
-                        ? "My Tickets"
-                        : "My Account",
-          ),
-          body:  UpgradeAlert(
-          upgrader: Upgrader(
-            dialogStyle: Platform.isAndroid ? UpgradeDialogStyle.material : UpgradeDialogStyle.cupertino,
-            durationUntilAlertAgain: const Duration(milliseconds: 100),
-             showLater: false,
-            canDismissDialog: false,
-            debugDisplayAlways: true,
-            showReleaseNotes: false
-            
-
-          ),
-            child: state.selectedNavBarIndex == 0
+        return WillPopScope(
+          onWillPop: () {
+            showDialog(
+              context: context,
+              builder: (context) => const ExitConfirmationDialog(),
+            );
+            return Future.value(false);
+          },
+          child: Scaffold(
+            appBar: HomeAppBar(
+              title: state.selectedNavBarIndex == 0
+                  ? "Home"
+                  : state.selectedNavBarIndex == 1
+                      ? "Search"
+                      : state.selectedNavBarIndex == 2
+                          ? "My Tickets"
+                          : "My Account",
+            ),
+            body: UpgradeAlert(
+              upgrader: Upgrader(
+                  dialogStyle: Platform.isAndroid
+                      ? UpgradeDialogStyle.material
+                      : UpgradeDialogStyle.cupertino,
+                  durationUntilAlertAgain: const Duration(milliseconds: 100),
+                  showLater: false,
+                  canDismissDialog: false,
+                  debugDisplayAlways: false,
+                  showReleaseNotes: false),
+              child: state.selectedNavBarIndex == 0
                   ? const HomePage()
                   : state.selectedNavBarIndex == 1
                       ? const SearchPage()
                       : state.selectedNavBarIndex == 2
                           ? const MyTicketsPage()
                           : const MyAccountsPage(),
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: CustomColor.appBackbroundColor,
-            showSelectedLabels: true,
-            currentIndex: state.selectedNavBarIndex,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: CustomColor.containerColor,
-            onTap: (value) {
-              context.read<BaseBloc>().add(BaseEvent.changePage(index: value));
-            },
-            items: <BottomNavigationBarItem>[
-              const BottomNavigationBarItem(
-                icon: FaIcon(Icons.event),
-                label: 'Events',
-              ),
-              const BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Search',
-              ),
-              BottomNavigationBarItem(
-                icon: Image.asset(
-                  ImageConstant.ticketsDownImage,
-                  width: 20,
-                  height: 20,
+            ),
+            bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: CustomColor.appBackbroundColor,
+              showSelectedLabels: true,
+              currentIndex: state.selectedNavBarIndex,
+              selectedItemColor: Colors.white,
+              unselectedItemColor: CustomColor.containerColor,
+              onTap: (value) {
+                context
+                    .read<BaseBloc>()
+                    .add(BaseEvent.changePage(index: value));
+              },
+              items: <BottomNavigationBarItem>[
+                const BottomNavigationBarItem(
+                  icon: FaIcon(Icons.event),
+                  label: 'Events',
                 ),
-                label: 'My Tickets',
-              ),
-              const BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'My Account',
-              ),
-            ],
+                const BottomNavigationBarItem(
+                  icon: Icon(Icons.search),
+                  label: 'Search',
+                ),
+                BottomNavigationBarItem(
+                  icon: Image.asset(
+                    ImageConstant.ticketsDownImage,
+                    width: 20,
+                    height: 20,
+                  ),
+                  label: 'My Tickets',
+                ),
+                const BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'My Account',
+                ),
+              ],
+            ),
           ),
         );
       },
