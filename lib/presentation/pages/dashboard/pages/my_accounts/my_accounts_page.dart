@@ -7,6 +7,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/custom_texts
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_accounts/widgets/info_card.dart';
 import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class MyAccountsPage extends StatelessWidget {
   const MyAccountsPage({super.key});
@@ -103,12 +104,35 @@ class MyAccountsPage extends StatelessWidget {
              title: "Logout",
              subtitle: "Logout",
              onTap: () {
-              AutoRouter.of(context).push(LoginRoute());
+              AutoRouter.of(context).push(const LoginRoute());
              },),
 
              
              const SizedBox(height: 10,),
-             Text("App version 1.0.0 ",style: CustomTextStyle.subtitleTextStyle,)
+             FutureBuilder<PackageInfo>(
+                future: PackageInfo.fromPlatform(),
+                builder: (context, snapshot) {
+                  switch (snapshot.connectionState) {
+                    case ConnectionState.done:
+                      return Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                 child: FittedBox(
+                   child: Text("App version ${snapshot.data!.version}",
+                   style: CustomTextStyle.subtitleTextStyle,
+                   ),
+                 ),
+               ),
+                        );
+                    default:
+                      return const SizedBox();
+                  }
+              
+                },
+              ),
+           
+            
             ],
            ),
          ],

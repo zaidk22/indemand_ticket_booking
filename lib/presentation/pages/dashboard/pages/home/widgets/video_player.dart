@@ -19,7 +19,7 @@ class _VideoBackgroundScreenState extends State<VideoBackgroundScreen> {
   @override
   void initState() {
     super.initState();
-   _controller = VideoPlayerController.networkUrl(Uri.parse('http://staging.indemandtickets.co.uk//frontend/web/backend/images/landing_video.mp4'),
+   _controller = VideoPlayerController.networkUrl(Uri.parse('http://staging.indemandtickets.co.uk//frontend/web/backend/images/landing_video.webm'),
    
    );
 
@@ -60,7 +60,7 @@ class _VideoBackgroundScreenState extends State<VideoBackgroundScreen> {
 
   @override
   void dispose() {
-   
+  
     _controller.dispose();
      super.dispose();
   }

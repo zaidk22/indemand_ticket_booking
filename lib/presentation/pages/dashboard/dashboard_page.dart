@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,6 +11,7 @@ import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_ac
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_tickets/my_tickets_page.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/search/search_page.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app_bar.dart';
+import 'package:upgrader/upgrader.dart';
 
 import '../../../application/dashboard/base_bloc.dart';
 
@@ -43,13 +46,25 @@ class DashBoard extends StatelessWidget {
                         ? "My Tickets"
                         : "My Account",
           ),
-          body: state.selectedNavBarIndex == 0
-                ? const HomePage()
-                : state.selectedNavBarIndex == 1
-                    ? const SearchPage()
-                    : state.selectedNavBarIndex == 2
-                        ? const MyTicketsPage()
-                        : const MyAccountsPage(),
+          body:  UpgradeAlert(
+          upgrader: Upgrader(
+            dialogStyle: Platform.isAndroid ? UpgradeDialogStyle.material : UpgradeDialogStyle.cupertino,
+            durationUntilAlertAgain: const Duration(milliseconds: 100),
+             showLater: false,
+            canDismissDialog: false,
+            debugDisplayAlways: true,
+            showReleaseNotes: false
+            
+
+          ),
+            child: state.selectedNavBarIndex == 0
+                  ? const HomePage()
+                  : state.selectedNavBarIndex == 1
+                      ? const SearchPage()
+                      : state.selectedNavBarIndex == 2
+                          ? const MyTicketsPage()
+                          : const MyAccountsPage(),
+          ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: CustomColor.appBackbroundColor,
