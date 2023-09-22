@@ -29,12 +29,12 @@ class HomePage extends StatelessWidget {
         shrinkWrap: true,
         children: [
  const SizedBox(height: 10,),
-            VideoBackgroundScreen(deviceSize: deviceSize),
+         //   VideoBackgroundScreen(deviceSize: deviceSize),
                  const SizedBox(height: 10,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text("Most Popular",style: CustomTextStyle.titleTextStyle,)),
-           
+           const SizedBox(height: 10,),
            MostPopular(deviceSize: deviceSize),
               const SizedBox(height: 15,),
           

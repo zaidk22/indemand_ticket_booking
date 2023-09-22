@@ -41,7 +41,7 @@ class EventDetails extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("from Rs 100",style: CustomTextStyle.subtitleBlackMinTextStyle,),
-            CustomAuthButton(text: "Book Now")
+            const CustomAuthButton(text: "Book Now")
           ],
         ),
       ),

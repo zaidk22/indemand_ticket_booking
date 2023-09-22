@@ -8,12 +8,48 @@ class AppRouter extends $AppRouter {
    
  @override      
  List<AutoRoute> get routes => [  
-  AutoRoute(page: SplashRoute.page,initial: true),
-  AutoRoute(page: LoginRoute.page),
-  AutoRoute(page: SignUpRoute.page),
-  AutoRoute(page: DashBoard.page),
-  AutoRoute(page: EventDetails.page),
-  AutoRoute(page: CartRoute.page)
+
+
+  CustomRoute(page: SplashRoute.page,
+  transitionsBuilder: TransitionsBuilders.slideBottom,
+          initial: true,
+  durationInMilliseconds: 400
+  ),
+       CustomRoute(page: LoginRoute.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+
+  durationInMilliseconds: 400
+  ),
+     CustomRoute(page: SignUpRoute.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  durationInMilliseconds: 400
+  ),
+   CustomRoute(page: DashBoard.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  
+ 
+  durationInMilliseconds: 400
+  ),
+
+   CustomRoute(page:  EventDetails.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  durationInMilliseconds: 400
+  ),
+   CustomRoute(page:CartRoute.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  durationInMilliseconds: 400
+  ),
+   CustomRoute(page: CustomWebRoute.page,
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  durationInMilliseconds: 400
+  ),
+     CustomRoute(page: BookedTicketDeatils.page,
+
+  transitionsBuilder: TransitionsBuilders.slideLeft,
+  durationInMilliseconds: 400
+  ),
+
+
 
 
   ];    

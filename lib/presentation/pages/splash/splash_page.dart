@@ -40,7 +40,8 @@ class SplashPage extends StatelessWidget {
         return Scaffold(
           body: Container(
             decoration: BoxDecoration(
-              color: CustomColor.appBackbroundColor,
+            //  color: CustomColor.appBackbroundColor,
+            gradient: CustomColor.backGradient,
               image: DecorationImage(
                 image: const AssetImage(ImageConstant.splashImage),
                 colorFilter: ColorFilter.mode(
@@ -74,7 +75,7 @@ class SplashPage extends StatelessWidget {
                             child: Text("Loading...",
                                     style: CustomTextStyle.splashText)
                                 .animate()
-                                .fade(duration: 600.ms)),
+                                .fadeIn(duration: 1600.ms)),
                       ],
                     ),
                   ),

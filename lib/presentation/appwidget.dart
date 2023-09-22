@@ -29,6 +29,7 @@ class AppWigdet extends StatelessWidget {
       ],
     
      child: MaterialApp.router(
+      
       routerConfig: appRouter.config(),
       debugShowCheckedModeBanner: false,
       title: 'Indemand',

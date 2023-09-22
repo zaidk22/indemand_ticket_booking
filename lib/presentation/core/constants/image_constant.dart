@@ -1,7 +1,7 @@
 
 class ImageConstant{
 
-static const String dummyNetworkImage = 'https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?size=626&ext=jpg';
+static const String dummyNetworkImage = 'https://picsum.photos/2000/2000';
 static const String splashImage = "assets/images/splash.png"; 
 static const String splashLogo = "assets/images/splash_logo.png";
 

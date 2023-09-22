@@ -2,6 +2,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:indemand_ticket_booking/domain/core/constants/api_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
@@ -85,7 +86,7 @@ class MyAccountsPage extends StatelessWidget {
              title: "FAQ",
              subtitle: "frequently asked questions",
              onTap: () {
-              
+                AutoRouter.of(context).push(CustomWebRoute(endPoint: ApiConstants.faq));
              },),
 
            
@@ -95,7 +96,7 @@ class MyAccountsPage extends StatelessWidget {
              title: "Help",
              subtitle: "Any questions or issues? We are here to help",
              onTap: () {
-              
+              AutoRouter.of(context).push(CustomWebRoute(endPoint: ApiConstants.help));
              },),
 
                    const SizedBox(height: 20,),

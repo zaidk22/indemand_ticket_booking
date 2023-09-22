@@ -12,7 +12,7 @@ class TicketTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      height: deviceSize.height * 0.24,
+    //  height: deviceSize.height * 0.24,
       child: Column(
         children: [
           Column(

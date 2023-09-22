@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 
 class CustomFormField extends StatelessWidget {
   const CustomFormField({
@@ -21,14 +23,18 @@ class CustomFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
-        
+      
+        style: CustomTextStyle.lableTextStyle,
         inputFormatters: inputFormatters,
           validator: (inputString) {
                 return validator?.call(inputString);
               },
         decoration: InputDecoration(hintText: hintText,
         label: Text(hintText),
-      prefixIcon:   Icon(prefixIcon)  ,
+        
+        hintStyle: CustomTextStyle.lableTextStyle,
+        labelStyle: CustomTextStyle.lableTextStyle,
+      prefixIcon:   Icon(prefixIcon,color: CustomColor.whiteColor,)  ,
        border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                  

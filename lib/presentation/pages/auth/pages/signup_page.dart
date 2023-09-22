@@ -29,7 +29,8 @@ class _SignUpPageState extends State<SignUpPage> {
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            color: CustomColor.appBackbroundColor,
+           // color: CustomColor.appBackbroundColor,
+            gradient: CustomColor.backGradient
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,10 +46,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               Expanded(
-                child: Card(
-                  clipBehavior: Clip.none,
+                child: Container(
+                 // clipBehavior: Clip.none,
                   //color: CustomColor.authBackbroundColor3,
-                  elevation: 20,
+                  color: Colors.transparent,
+                 // elevation: 20,
 
                   child: SingleChildScrollView(
                     child: Form(
@@ -117,9 +119,9 @@ class _SignUpPageState extends State<SignUpPage> {
                             text: "Sign up",
                             onTap: () {
                               // AutoRouter.of(context).replace(DashBoard());
-                              if (_formKey.currentState!.validate()) {
+                            //  if (_formKey.currentState!.validate()) {
                                 AutoRouter.of(context).push(const DashBoard());
-                              }
+                            //  }
                             },
                           ),
                           RichText(
@@ -130,7 +132,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 children: <TextSpan>[
                                   TextSpan(
                                       text: ' Sign in',
-                                      style: CustomTextStyle.buttonTextStyle,
+                                      style: CustomTextStyle.warningTextStyle,
                                       recognizer: TapGestureRecognizer()
                                         ..onTap = () {
                                           AutoRouter.of(context)

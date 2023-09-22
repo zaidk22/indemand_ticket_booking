@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
+import 'package:indemand_ticket_booking/presentation/pages/event_details/widgets/map_view.dart';
 
 
 
@@ -61,12 +62,11 @@ class _EventTabViewState extends State<EventTabView> with SingleTickerProviderSt
            child: TabBarView(
             controller: _tabController,
             children: [
-            Container(
-              color: Colors.amber,
-            ),
+          
             Container(
               color: Colors.red,
             ),
+             const  MapWidget(),
             Container(
               color: Colors.green,
             ),

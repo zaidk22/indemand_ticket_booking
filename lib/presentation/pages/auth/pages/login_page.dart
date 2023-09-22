@@ -29,7 +29,9 @@ class _LoginPageState extends State<LoginPage> {
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            color: CustomColor.appBackbroundColor,
+           // color: CustomColor.containerColor,
+                           gradient: CustomColor.backGradient
+          
           ),
           child: SingleChildScrollView(
             child: SizedBox(
@@ -49,16 +51,15 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                         
-                  SizedBox(
-                   // height: deviceSize.height*0.4,
-                    width: deviceSize.width *0.95,
-                    child: Card(
-                      
-                      clipBehavior: Clip.none,
-                    color: CustomColor.whiteColor,
-                    
-                      elevation: 20,
+                  Expanded(
+                    child: Container(
+                      decoration: const BoxDecoration(
                         
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+           
+                      ),
+                     // height: deviceSize.height*0.4,
+                      width: deviceSize.width *0.95,
                       child: Form(
                         key: _key ,
                         child: Column(
@@ -85,9 +86,9 @@ class _LoginPageState extends State<LoginPage> {
                               onTap: () {
                                 // AutoRouter.of(context).replace(DashBoard());
                                
-                                   if (_key.currentState!.validate()) {
+                                 //  if (_key.currentState!.validate()) {
                            AutoRouter.of(context).replace(const DashBoard());
-                        }
+                       // }
                               },
                             ),
                             const SizedBox(
