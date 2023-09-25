@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
 
 import '../../../core/constants/image_constant.dart';
 
@@ -31,7 +33,7 @@ class EventImageWidget extends StatelessWidget {
               ),
 
                 onPressed: () {
-                  
+                  AutoRouter.of(context).pop();
                 },
              icon: const Icon(Icons.arrow_back_ios),color: Colors.black,)),
            
@@ -44,7 +46,7 @@ class EventImageWidget extends StatelessWidget {
                 side: const BorderSide(color: Colors.white),  // Border color
               ),
                 onPressed: () {
-                  
+                  CustomShareFile.shareData("Hi checkout this new event", "https://pub.dev/packages/share_plus/install");
                 },
              icon: const Icon(Icons.share),color: Colors.black,))
              ], 

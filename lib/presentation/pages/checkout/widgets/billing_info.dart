@@ -12,7 +12,8 @@ class BillingInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       return  ExpansionTile(
-     
+         collapsedIconColor: CustomColor.whiteColor, 
+     iconColor: CustomColor.whiteColor,
   
      collapsedBackgroundColor: CustomColor.containerColor,
     shape: RoundedRectangleBorder(

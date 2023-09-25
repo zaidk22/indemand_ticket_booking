@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_form_field.dart';
 
@@ -12,6 +13,8 @@ class PersonalInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ExpansionTile(
+          collapsedIconColor: CustomColor.whiteColor, 
+     iconColor: CustomColor.whiteColor,
             title: Text(
                 'Personal Information',
                 style: CustomTextStyle.titleTextStyle,

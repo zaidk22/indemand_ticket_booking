@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
+import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
 import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
 
 
@@ -11,7 +12,7 @@ class LatestEvents extends StatelessWidget {
   final Size deviceSize;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: deviceSize.height*0.33,
     
       width: deviceSize.width,
@@ -57,7 +58,9 @@ class LatestEvents extends StatelessWidget {
                       right: -2,
                       top: 0,
                       child: IconButton(onPressed: () {
-                      
+                      CustomShareFile.shareData("Hi Checkout this event", 
+                      'https://www.google.co.in/'
+                      );
                     }, icon: const Icon(Icons.share_rounded))),
         
               

@@ -10,7 +10,8 @@ class OrderReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      initiallyExpanded: true,
+          collapsedIconColor: CustomColor.whiteColor, 
+     iconColor: CustomColor.whiteColor,
       collapsedBackgroundColor: CustomColor.containerColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0), // Adjust the radius as needed

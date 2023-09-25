@@ -49,9 +49,9 @@ class MyAccountsPage extends StatelessWidget {
 
                   ],
                  ),
-                      IconButton(onPressed: () {
+                      // IconButton(onPressed: () {
                         
-                      }, icon: const Icon(Icons.settings,color: Colors.white,))
+                      // }, icon: const Icon(Icons.settings,color: Colors.white,))
                   
                 ],
                ),

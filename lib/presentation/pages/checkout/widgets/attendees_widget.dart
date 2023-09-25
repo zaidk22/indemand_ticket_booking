@@ -11,8 +11,10 @@ class AttendeesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ExpansionTile(
-     
+    collapsedIconColor: CustomColor.whiteColor, 
+     iconColor: CustomColor.whiteColor,
      collapsedBackgroundColor: CustomColor.containerColor,
+    
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0), // Adjust the radius as needed
       ),
@@ -24,7 +26,7 @@ class AttendeesWidget extends StatelessWidget {
       childrenPadding:  const EdgeInsets.all(8.0),
       title: Text('Please enter name of all Attendees', style: CustomTextStyle.labelTextStyle),
           children: [
-            Text('London new year\'s eve: Masquerade Ball / VIP / Quantity-3'
+            Text('London new year\'s eve: Masquerade Ball / VIP / Quantity-2'
             , style: CustomTextStyle.labelTextStyle
             ),
           SizedBox(height: 10,),

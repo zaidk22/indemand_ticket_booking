@@ -10,9 +10,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
-import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart' as _i6;
+import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart' as _i7;
 import 'package:indemand_ticket_booking/application/dashboard/base_bloc.dart'
     as _i3;
+import 'package:indemand_ticket_booking/application/timer/timer_bloc.dart'
+    as _i6;
 import 'package:indemand_ticket_booking/domain/auth/i_auth_facade.dart' as _i4;
 import 'package:indemand_ticket_booking/infrastructure/auth/auth_facade.dart'
     as _i5;
@@ -31,7 +33,8 @@ extension GetItInjectableX on _i1.GetIt {
     );
     gh.factory<_i3.BaseBloc>(() => _i3.BaseBloc());
     gh.lazySingleton<_i4.IAuthFacade>(() => _i5.AuthFacade());
-    gh.factory<_i6.AuthBloc>(() => _i6.AuthBloc(gh<_i4.IAuthFacade>()));
+    gh.factory<_i6.TimerBloc>(() => _i6.TimerBloc());
+    gh.factory<_i7.AuthBloc>(() => _i7.AuthBloc(gh<_i4.IAuthFacade>()));
     return this;
   }
 }

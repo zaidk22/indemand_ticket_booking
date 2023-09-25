@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart';
+import 'package:indemand_ticket_booking/application/timer/timer_bloc.dart';
 import 'package:indemand_ticket_booking/injection.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/app_theme.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
@@ -24,8 +25,11 @@ class AppWigdet extends StatelessWidget {
           },
         ),
         BlocProvider(create: (context) {
+          return getIt<TimerBloc>();
+        },),
+        BlocProvider(create: (context) {
           return getIt<AuthBloc>()..add(const AuthEvent.checkAuthState());
-        },)
+        },),
       ],
     
      child: MaterialApp.router(
@@ -39,7 +43,7 @@ class AppWigdet extends StatelessWidget {
       
         ),
     
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
 iconTheme: IconThemeData(color: Colors.white)
       ),
         useMaterial3: true,
