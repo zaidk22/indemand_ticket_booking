@@ -21,8 +21,8 @@ class CartTileWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           
           children: [
-            Text('In Demand Radio live at Punch Tarmeys',style: CustomTextStyle.lableTextStyle,),
-            Text('\$ 200',style: CustomTextStyle.lableTextStyle,),
+            Text('In Demand Radio live at Punch Tarmeys',style: CustomTextStyle.labelTextStyle,),
+            Text('\$ 200',style: CustomTextStyle.labelTextStyle,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
@@ -34,7 +34,7 @@ class CartTileWidget extends StatelessWidget {
                
                 )),
                 
-                Text("1",style: CustomTextStyle.lableTextStyle,),
+                Text("1",style: CustomTextStyle.labelTextStyle,),
 
                      IconButton(onPressed: () {
                   
@@ -56,10 +56,10 @@ class CartTileWidget extends StatelessWidget {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text("Total Amount ",style: CustomTextStyle.lableTextStyle,),
+                  Text("Total Amount ",style: CustomTextStyle.labelTextStyle,),
                 
                   Expanded(
-                    child: Text("\$200",style: CustomTextStyle.lableTextStyle,
+                    child: Text("\$200",style: CustomTextStyle.labelTextStyle,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.end,

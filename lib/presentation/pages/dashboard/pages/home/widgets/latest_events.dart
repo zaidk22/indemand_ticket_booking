@@ -20,6 +20,7 @@ class LatestEvents extends StatelessWidget {
       child: ListView.builder(
         itemCount: 10,
         scrollDirection: Axis.horizontal,
+        
         itemBuilder: (context, index) {
         return InkWell(
           onTap: () {

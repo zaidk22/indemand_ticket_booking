@@ -47,7 +47,7 @@ DateTime? selectedDate ;
             ),
             const SizedBox(width: 5,),
         Text(   selectedDate !=null ? "$selectedDate" :"Date",
-            style: CustomTextStyle.lableTextStyle,
+            style: CustomTextStyle.labelTextStyle,
             ),
              selectedDate ==null ? const SizedBox() :IconButton(onPressed: () {
                setState(() {

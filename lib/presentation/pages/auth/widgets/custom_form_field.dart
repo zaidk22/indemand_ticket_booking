@@ -24,7 +24,7 @@ class CustomFormField extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
       
-        style: CustomTextStyle.lableTextStyle,
+        style: CustomTextStyle.labelTextStyle,
         inputFormatters: inputFormatters,
           validator: (inputString) {
                 return validator?.call(inputString);
@@ -32,8 +32,8 @@ class CustomFormField extends StatelessWidget {
         decoration: InputDecoration(hintText: hintText,
         label: Text(hintText),
         
-        hintStyle: CustomTextStyle.lableTextStyle,
-        labelStyle: CustomTextStyle.lableTextStyle,
+        hintStyle: CustomTextStyle.labelTextStyle,
+        labelStyle: CustomTextStyle.labelTextStyle,
       prefixIcon:   Icon(prefixIcon,color: CustomColor.whiteColor,)  ,
        border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),

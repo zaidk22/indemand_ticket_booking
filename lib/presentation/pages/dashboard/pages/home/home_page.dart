@@ -10,7 +10,6 @@ import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart';
 
 import 'widgets/most_popular.dart';
-import 'widgets/video_player.dart';
 
 
 

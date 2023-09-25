@@ -73,7 +73,7 @@ class BookedTicketTile extends StatelessWidget {
                                       const SizedBox(
                                   height: 20,
                                 ), 
-                                CustomAuthButton(onTap: () {}, text: 'Add to Calender'),
+                              //  CustomAuthButton(onTap: () {}, text: 'Add to Calender'),
                                 
                                 const SizedBox(
                                   height: 20,

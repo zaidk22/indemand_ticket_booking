@@ -17,7 +17,7 @@ class SearchWidget extends StatelessWidget {
         
       ),
       child: TextField(
-        style:  CustomTextStyle.lableTextStyle,
+        style:  CustomTextStyle.labelTextStyle,
         autofocus: false,
         decoration: InputDecoration(
         
@@ -30,7 +30,7 @@ class SearchWidget extends StatelessWidget {
           size: 15,)),
           border: InputBorder.none,
           hintText: "Event Name",
-          hintStyle: CustomTextStyle.lableTextStyle,
+          hintStyle: CustomTextStyle.labelTextStyle,
          
         ),
       ),

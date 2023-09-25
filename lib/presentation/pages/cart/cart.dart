@@ -40,7 +40,7 @@ class CartPage extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Text('Total Amount :  \$200000',style: CustomTextStyle.lableTextStyle,
+                child: Text('Total Amount :  \$200000',style: CustomTextStyle.labelTextStyle,
                 ),
               ),
               const SizedBox(width: 10,),
@@ -53,13 +53,14 @@ class CartPage extends StatelessWidget {
                   
                 }, icon: Icon(Icons.shopping_cart,
                 color: Colors.white,
-                ), label: Text('Checkout',style: CustomTextStyle.lableTextStyle,)),
+                ), label: Text('Checkout',style: CustomTextStyle.labelTextStyle,)),
               )
             ],
           ),
         ],
       ),
     ),
+   
     );
   }
 }

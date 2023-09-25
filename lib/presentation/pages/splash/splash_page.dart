@@ -76,6 +76,8 @@ class SplashPage extends StatelessWidget {
                                     style: CustomTextStyle.splashText)
                                 .animate()
                                 .fadeIn(duration: 1600.ms)),
+                      
+                      
                       ],
                     ),
                   ),

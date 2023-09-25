@@ -27,7 +27,10 @@ class CustomColor {
           begin: Alignment.topLeft,
       end: Alignment.bottomRight,
         colors: [
-        Color(0xff4DA0B0),Color(0xffD39D38),
-        Color(0xffFFE000),Color(0xff799F0C)
+        Color(0xff243748),
+         Color(0xff4b749f),
+        //  Color(0xff616161),
+        //  Color(0xff9BC5C3)
+     
       ]);
 }

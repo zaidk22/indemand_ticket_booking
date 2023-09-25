@@ -13,7 +13,7 @@ static TextStyle appTitleTextStyle = GoogleFonts.podkova(
 static TextStyle buttonTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: CustomColor.authBackbgroundColor1);
 
-    static TextStyle lableTextStyle = GoogleFonts.monda(
+    static TextStyle labelTextStyle = GoogleFonts.monda(
     fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white,
     
     );

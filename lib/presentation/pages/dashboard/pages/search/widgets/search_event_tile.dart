@@ -26,7 +26,7 @@ class SearchEventTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Spanish paella Party-Long Island",
-                style: CustomTextStyle.lableTextStyle,
+                style: CustomTextStyle.labelTextStyle,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 ),
@@ -38,7 +38,7 @@ class SearchEventTile extends StatelessWidget {
                 ),
                  const SizedBox(height: 2,),
                     Text(" \$ 200",
-                style: CustomTextStyle.lableTextStyle,
+                style: CustomTextStyle.labelTextStyle,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 ),

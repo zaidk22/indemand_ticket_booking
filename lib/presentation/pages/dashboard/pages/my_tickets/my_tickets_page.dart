@@ -13,6 +13,9 @@ class MyTicketsPage extends StatelessWidget {
      final deviceSize =  MediaQuery.sizeOf(context);
     return  Container(
         color: CustomColor.appBackbroundColor,
+        // decoration: BoxDecoration(
+        //   gradient: CustomColor.backGradient
+        // ),
         height : deviceSize.height,
       child: 
           ListView.builder(
