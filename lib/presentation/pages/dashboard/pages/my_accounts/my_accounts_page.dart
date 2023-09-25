@@ -61,9 +61,7 @@ class MyAccountsPage extends StatelessWidget {
             InfoCard(icon: Icons.person,
              title: "Profile",
              subtitle: "Change profile",
-             onTap: () {
-              
-             },),
+             onTap: () => AutoRouter.of(context).push(const ProfileRoute()),),
                 const SizedBox(height: 20,),
 
             InfoCard(icon: Icons.movie,

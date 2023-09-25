@@ -34,7 +34,7 @@ class CustomFormField extends StatelessWidget {
         
         hintStyle: CustomTextStyle.labelTextStyle,
         labelStyle: CustomTextStyle.labelTextStyle,
-      prefixIcon:   Icon(prefixIcon,color: CustomColor.whiteColor,)  ,
+ prefixIcon: prefixIcon != null ? Icon(prefixIcon, color: CustomColor.whiteColor) : null,
        border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                  

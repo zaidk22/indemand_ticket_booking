@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
+import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
 
 import 'widgets/cart_tile.dart';
 
@@ -26,7 +27,7 @@ class CartPage extends StatelessWidget {
             height: deviceSize.height,
             child: ListView.builder(
               itemCount: 2,
-              itemBuilder: (context, index) =>  CartTileWidget()),
+              itemBuilder: (context, index) =>  const CartTileWidget()),
           )
            
         ],
@@ -46,12 +47,10 @@ class CartPage extends StatelessWidget {
               const SizedBox(width: 10,),
               Expanded(
                 child: ElevatedButton.icon(
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.orange)
                   ),
-                  onPressed: () {
-                  
-                }, icon: Icon(Icons.shopping_cart,
+                  onPressed:() => AutoRouter.of(context).push(const CheckoutRoute()), icon: const Icon(Icons.shopping_cart,
                 color: Colors.white,
                 ), label: Text('Checkout',style: CustomTextStyle.labelTextStyle,)),
               )

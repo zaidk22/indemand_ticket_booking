@@ -8,7 +8,7 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: SplashRoute.page,
             transitionsBuilder: TransitionsBuilders.slideBottom,
-      
+            initial: true,
             durationInMilliseconds: 400),
         CustomRoute(
             page: LoginRoute.page,
@@ -41,11 +41,12 @@ class AppRouter extends $AppRouter {
                 CustomRoute(
             page: CheckoutRoute.page,
             transitionsBuilder: TransitionsBuilders.slideLeft,
-                  initial: true,
+                 
             durationInMilliseconds: 400),
 
              CustomRoute(
             page: ProfileRoute.page,
+       
             transitionsBuilder: TransitionsBuilders.slideLeft,
             durationInMilliseconds: 400),
       ];
