@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart';
+import 'package:indemand_ticket_booking/application/latestEvents/latest_event_bloc.dart';
 import 'package:indemand_ticket_booking/application/timer/timer_bloc.dart';
 import 'package:indemand_ticket_booking/injection.dart';
-import 'package:indemand_ticket_booking/presentation/core/constants/app_theme.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import '../application/dashboard/base_bloc.dart';
 import 'routes/routes.dart';
@@ -29,6 +29,11 @@ class AppWigdet extends StatelessWidget {
         },),
         BlocProvider(create: (context) {
           return getIt<AuthBloc>()..add(const AuthEvent.checkAuthState());
+        },),
+
+          BlocProvider(create: (context) {
+         return getIt<EventsBloc>()..add(const EventsEvent.getLatestEvents([]))
+         ..add(const EventsEvent.getPopularEvents([]));
         },),
       ],
     

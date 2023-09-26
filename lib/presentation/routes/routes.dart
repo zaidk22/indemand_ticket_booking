@@ -8,7 +8,7 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: SplashRoute.page,
             transitionsBuilder: TransitionsBuilders.slideBottom,
-            initial: true,
+      
             durationInMilliseconds: 400),
         CustomRoute(
             page: LoginRoute.page,
@@ -20,6 +20,7 @@ class AppRouter extends $AppRouter {
             durationInMilliseconds: 400),
         CustomRoute(
             page: DashBoard.page,
+              initial: true,
             transitionsBuilder: TransitionsBuilders.slideLeft,
             durationInMilliseconds: 400),
         CustomRoute(
@@ -47,6 +48,14 @@ class AppRouter extends $AppRouter {
              CustomRoute(
             page: ProfileRoute.page,
        
+            transitionsBuilder: TransitionsBuilders.slideLeft,
+            durationInMilliseconds: 400),
+
+
+            
+             CustomRoute(
+            page: DetailedMostPopularRoute.page,
+        
             transitionsBuilder: TransitionsBuilders.slideLeft,
             durationInMilliseconds: 400),
       ];

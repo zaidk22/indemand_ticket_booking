@@ -1,6 +1,10 @@
-
+import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:indemand_ticket_booking/application/latestEvents/latest_event_bloc.dart';
+import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/constants/custom_textstyle.dart';
 import '../../../../../core/constants/image_constant.dart';
@@ -15,46 +19,52 @@ class MostPopular extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-       height: deviceSize.height*0.35,
-     
-       child: ListView.builder(
-  itemCount: 10,
-  scrollDirection: Axis.horizontal,
-  itemBuilder: (context, index) {
-
-  
-  return Column(
-    children: [
-      Container(
-            height: deviceSize.height*0.30,
-       width: deviceSize.width*0.5,
-      margin:const EdgeInsets.symmetric(horizontal: 20),
-        child: ClipRRect(
+    return BlocBuilder<EventsBloc,EventsState>(
+      builder: (context, state) {
         
-          borderRadius: BorderRadius.circular(8.0),
-          child: CachedNetworkImage(
-            imageUrl: 
-           ImageConstant.dummyNetworkImage,
-          fit: BoxFit.cover,
+        
+        return SizedBox(
+            height: deviceSize.height * 0.30,
+            child: ListView.builder(
+              itemCount: state.popularEventList.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return InkWell(
+                  onTap: () => AutoRouter.of(context)
+                      .push(DetailedMostPopularRoute(title: 'Most Popular')),
+                  child: Column(
+                    children: [
+                  Container(
+  height: deviceSize.height * 0.25,
+  width: deviceSize.width * 0.5,
+  margin: const EdgeInsets.symmetric(horizontal: 20),
+  child: ClipRRect(
+    borderRadius: BorderRadius.circular(8.0),
+    child: CachedNetworkImage(
+            imageUrl: state.popularEventList[index].image_url ??
+                "${ImageConstant.dummyNetworkImage}",
+             fit: BoxFit.contain,
           ),
-      ),
-      ),
-     const SizedBox(height: 2,),
-       Align(
-      alignment: Alignment.bottomCenter,
-      child: Text("InDemand Radio",style: CustomTextStyle.titleTextStyle,
-      maxLines: 1,
-      overflow: TextOverflow.ellipsis,
-      ),
-    ),
-    ],
-  );
-  
-  },
-)
-     );
- 
- 
+  ),
+),
+                      const SizedBox(
+                        height: 2,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text(
+                          "${state.popularEventList[index].event_name ?? ""}",
+                          style: CustomTextStyle.titleTextStyle,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ));
+      },
+    );
   }
 }

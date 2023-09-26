@@ -1,110 +1,39 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:indemand_ticket_booking/application/latestEvents/latest_event_bloc.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
+import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/latest_event_tile.dart';
 import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
 
-
 class LatestEvents extends StatelessWidget {
-  const LatestEvents({super.key,
-   required this.deviceSize});
+  const LatestEvents({super.key, required this.deviceSize});
   final Size deviceSize;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: deviceSize.height*0.33,
+    return BlocBuilder<EventsBloc, EventsState>(
+      builder: (context, state) {
+        if(state.isLoading){
+          return Center(child: SizedBox());
+        }
+    return  SizedBox(
+         height: deviceSize.height*0.33,
     
       width: deviceSize.width,
-     
-     // color: Colors.amber,
-      child: ListView.builder(
-        itemCount: 10,
-        scrollDirection: Axis.horizontal,
-        
-        itemBuilder: (context, index) {
-        return InkWell(
-          onTap: () {
-            AutoRouter.of(context).push(const EventDetails());
-          },
-          child: Container(
-             decoration: BoxDecoration(
-          //  color: Colors.red,
-          borderRadius: BorderRadius.circular(20)
-              ),
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-          width: deviceSize.width*0.5,
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    height: deviceSize.height*.2,
-                     decoration: BoxDecoration(
-            color: Colors.red,
-          borderRadius: BorderRadius.circular(20)
-              ),
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-                      child: Image.asset(
-                        ImageConstant.dummyCardImg,
-                        
-                      fit: BoxFit.cover,
-                      ),
-                    )),
-        
-                    Positioned(
-                      right: -2,
-                      top: 0,
-                      child: IconButton(onPressed: () {
-                      CustomShareFile.shareData("Hi Checkout this event", 
-                      'https://www.google.co.in/'
-                      );
-                    }, icon: const Icon(Icons.share_rounded))),
-        
-              
-                  
-        
-                
-              
-                ],
-              ),
-            
-             Container(
-                  //height: deviceSize.height*0.1,
-                  width: double.infinity,
-                 
-                  decoration: const BoxDecoration(
-                     color: Colors.white,
-                   borderRadius: BorderRadius.vertical(bottom: Radius.circular(10)) 
-                  ) ,
-                  child:  Container(
-                    margin:const EdgeInsets.symmetric(horizontal: 10),
-                    child:  Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("In Demand Radio live at Punch Tarmeys",
-                        style: CustomTextStyle.subtitleBlackTextStyle,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        ), 
-                  
-                       const SizedBox(height: 10,),
-                         Text("From Rs. 200",
-                        style: CustomTextStyle.subtitleBlackTextStyle,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-            ],
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: state.latestEventList.length,
+          itemBuilder: (context, index) => LatestEventTile(deviceSize: deviceSize,
+          data: state.latestEventList[index],
           ),
-              
-            ),
-        );
-      },));
+        ),
+      )
+    ;
+
+      },
+    );
   }
 }

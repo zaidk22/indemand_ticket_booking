@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
+import 'package:indemand_ticket_booking/domain/core/constants/api_constants.dart';
 import '../../../../domain/core/constants/storage_constants.dart';
 import '../../../../domain/core/helper/secure_storage.dart';
 import 'api_error_interceptors.dart';
@@ -7,7 +8,7 @@ import 'api_error_interceptors.dart';
 
 class ApiService {
   static final BaseOptions options = BaseOptions(
-    baseUrl: "http",
+    baseUrl: ApiConstants.baseUrl,
     connectTimeout: const Duration(milliseconds: 8000), //5s
     receiveTimeout: const Duration(milliseconds:20000),  //15s
     contentType: Headers.jsonContentType,
