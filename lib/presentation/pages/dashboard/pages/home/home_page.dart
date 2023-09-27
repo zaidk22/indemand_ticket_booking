@@ -6,6 +6,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/custom_texts
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/latest_events.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/popular_locations.dart';
+import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/video_player.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/widgets/app_bar.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart';
 
@@ -28,7 +29,8 @@ class HomePage extends StatelessWidget {
         shrinkWrap: true,
         children: [
  const SizedBox(height: 10,),
-         //   VideoBackgroundScreen(deviceSize: deviceSize),
+        //  VideoBackgroundScreen(deviceSize: deviceSize),
+        
                  const SizedBox(height: 10,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),

@@ -13,7 +13,7 @@ import 'package:indemand_ticket_booking/infrastructure/core/network/rest_api/api
 import 'package:indemand_ticket_booking/infrastructure/core/network/rest_api/api_service.dart';
 import 'package:injectable/injectable.dart';
 
-//@LazySingleton(as: ILatestEventFacade)
+//@LazySingleton(as: IEventsFacade)
 @injectable
 class EventsFacade implements IEventsFacade{
   EventsFacade();
@@ -57,7 +57,7 @@ class EventsFacade implements IEventsFacade{
       final res = await ApiService()
           .dioUnauthorizedClient
           .get(ApiConstants.popularEvents);
-  
+  print(res);
     final eventList = (res.data as List<dynamic>)
     .map((p) => PopularEventsModel.fromMap(p as Map<String, dynamic>))
     .toList();

@@ -39,7 +39,7 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
       isShimmerEnable: true
     ))  ;
          final res = await _latestEventFacade.getPopularEvents();
-         print(res);
+        
       emit.call(
         res.fold(
           (l) => state.copyWith(
@@ -47,7 +47,7 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
           ),
           (r) => state.copyWith(
             isLoading: false,
-            popularEventList : r,
+           popularEventList: r,
           ),
         ),
       );

@@ -7,7 +7,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/custom_texts
 import 'package:badges/badges.dart' as badges;
 import 'package:indemand_ticket_booking/presentation/core/constants/dimension_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
   const HomeAppBar({super.key,required this.title});

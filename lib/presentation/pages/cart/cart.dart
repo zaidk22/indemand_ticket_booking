@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 import 'widgets/cart_tile.dart';
 

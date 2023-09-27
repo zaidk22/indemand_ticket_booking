@@ -22,15 +22,17 @@ class BookedTicketTile extends StatelessWidget {
       child:  ClipPath(
         clipper: TicketCardClipper(),
         child: Card(
+         
                         margin: EdgeInsets.symmetric(
                             horizontal: deviceSize.width * 0.05,
-                            vertical: deviceSize.height * 0.03),
+                            vertical: deviceSize.height * 0.05
+                            ),
                         elevation: 20,
                         child: ListView(
                           shrinkWrap: true,
                           children: [
                             SizedBox(
-                               //  height: deviceSize.height,
+                            //     height: deviceSize.height,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
@@ -84,9 +86,9 @@ class BookedTicketTile extends StatelessWidget {
                                   ),
                                   CustomAuthButton(onTap: () {}, text: 'Download Ticket'),
                                      
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
+                                  // const SizedBox(
+                                  //   height: 5,
+                                  // ),
                                 ],
                               ),
                             ),

@@ -10,7 +10,7 @@ import 'package:indemand_ticket_booking/presentation/core/utils/custom_functions
 import 'package:indemand_ticket_booking/presentation/pages/checkout/widgets/attendees_widget.dart';
 import 'package:indemand_ticket_booking/presentation/pages/checkout/widgets/billing_info.dart';
 import 'package:indemand_ticket_booking/presentation/pages/checkout/widgets/order_review.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 @RoutePage()
 class CheckoutPage extends StatefulWidget {

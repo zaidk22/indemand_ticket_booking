@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
@@ -22,8 +23,8 @@ class TicketTile extends StatelessWidget {
                   ClipRRect(
                     borderRadius:
                         const BorderRadius.vertical(top: Radius.circular(10)),
-                    child: Image.asset(
-                      ImageConstant.dummyCardImg,
+                    child: CachedNetworkImage(
+                     imageUrl:  ImageConstant.dummyNetworkImage,
                       fit: BoxFit.cover,
                       height: deviceSize.height * 0.12,
                       width: double.infinity,

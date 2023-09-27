@@ -30,9 +30,9 @@ class BookedTicketDeatils extends StatelessWidget {
         ),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 3, // Replace with the actual length of your items
+          itemCount: 3, 
           itemBuilder: (context, index) {
-            // Replace with your custom widget for each item
+    
             return BookedTicketTile(
               index: index,
             );

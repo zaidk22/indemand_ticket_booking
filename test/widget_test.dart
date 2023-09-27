@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:indemand_ticket_booking/main.dart';
-import 'package:indemand_ticket_booking/presentation/appwidget.dart';
+import 'package:indemand_ticket_booking/presentation/app_widget.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

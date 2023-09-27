@@ -6,7 +6,7 @@ import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 @RoutePage()
 class SplashPage extends StatelessWidget {

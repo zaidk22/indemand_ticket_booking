@@ -45,6 +45,7 @@ class DashBoard extends StatelessWidget {
             return Future.value(false);
           },
           child: Scaffold(
+     
             appBar: HomeAppBar(
               title: state.selectedNavBarIndex == 0
                   ? "Home"

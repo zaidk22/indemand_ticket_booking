@@ -8,117 +8,139 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i12;
-import 'package:flutter/material.dart' as _i13;
-import 'package:indemand_ticket_booking/presentation/pages/auth/pages/login_page.dart'
-    as _i8;
-import 'package:indemand_ticket_booking/presentation/pages/auth/pages/signup_page.dart'
-    as _i10;
-import 'package:indemand_ticket_booking/presentation/pages/booked_ticket_details/booked_ticket_details.dart'
+import 'package:auto_route/auto_route.dart' as _i13;
+import 'package:flutter/material.dart' as _i14;
+import 'package:indemand_ticket_booking/presentation/pages/add_to_cart/add_to_cart_page.dart'
     as _i1;
-import 'package:indemand_ticket_booking/presentation/pages/cart/cart.dart'
-    as _i2;
-import 'package:indemand_ticket_booking/presentation/pages/checkout/checkout_page.dart'
-    as _i3;
-import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart'
-    as _i5;
-import 'package:indemand_ticket_booking/presentation/pages/event_details/event_details.dart'
-    as _i7;
-import 'package:indemand_ticket_booking/presentation/pages/most_popular_details/most_popular_details_page.dart'
-    as _i6;
-import 'package:indemand_ticket_booking/presentation/pages/profile/profile_page.dart'
+import 'package:indemand_ticket_booking/presentation/pages/auth/pages/login_page.dart'
     as _i9;
-import 'package:indemand_ticket_booking/presentation/pages/splash/splash_page.dart'
+import 'package:indemand_ticket_booking/presentation/pages/auth/pages/signup_page.dart'
     as _i11;
-import 'package:indemand_ticket_booking/presentation/pages/webpage/webpage.dart'
+import 'package:indemand_ticket_booking/presentation/pages/booked_ticket_details/booked_ticket_details.dart'
+    as _i2;
+import 'package:indemand_ticket_booking/presentation/pages/cart/cart.dart'
+    as _i3;
+import 'package:indemand_ticket_booking/presentation/pages/checkout/checkout_page.dart'
     as _i4;
+import 'package:indemand_ticket_booking/presentation/pages/dashboard/dashboard_page.dart'
+    as _i6;
+import 'package:indemand_ticket_booking/presentation/pages/event_details/event_details.dart'
+    as _i8;
+import 'package:indemand_ticket_booking/presentation/pages/most_popular_details/most_popular_details_page.dart'
+    as _i7;
+import 'package:indemand_ticket_booking/presentation/pages/profile/profile_page.dart'
+    as _i10;
+import 'package:indemand_ticket_booking/presentation/pages/splash/splash_page.dart'
+    as _i12;
+import 'package:indemand_ticket_booking/presentation/pages/webpage/webpage.dart'
+    as _i5;
 
-abstract class $AppRouter extends _i12.RootStackRouter {
+abstract class $AppRouter extends _i13.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i12.PageFactory> pagesMap = {
-    BookedTicketDeatils.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+  final Map<String, _i13.PageFactory> pagesMap = {
+    AddToCartRoute.name: (routeData) {
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.BookedTicketDeatils(),
+        child: const _i1.AddToCartPage(),
+      );
+    },
+    BookedTicketDeatils.name: (routeData) {
+      return _i13.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.BookedTicketDeatils(),
       );
     },
     CartRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.CartPage(),
+        child: const _i3.CartPage(),
       );
     },
     CheckoutRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.CheckoutPage(),
+        child: const _i4.CheckoutPage(),
       );
     },
     CustomWebRoute.name: (routeData) {
       final args = routeData.argsAs<CustomWebRouteArgs>();
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.CustomWebPage(
+        child: _i5.CustomWebPage(
           key: args.key,
           endPoint: args.endPoint,
         ),
       );
     },
     DashBoard.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.DashBoard(),
+        child: const _i6.DashBoard(),
       );
     },
     DetailedMostPopularRoute.name: (routeData) {
       final args = routeData.argsAs<DetailedMostPopularRouteArgs>();
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i6.DetailedMostPopularPage(
+        child: _i7.DetailedMostPopularPage(
           key: args.key,
           title: args.title,
         ),
       );
     },
     EventDetails.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.EventDetails(),
+        child: const _i8.EventDetails(),
       );
     },
     LoginRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.LoginPage(),
+        child: const _i9.LoginPage(),
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.ProfilePage(),
+        child: const _i10.ProfilePage(),
       );
     },
     SignUpRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.SignUpPage(),
+        child: const _i11.SignUpPage(),
       );
     },
     SplashRoute.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
+      return _i13.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.SplashPage(),
+        child: const _i12.SplashPage(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.BookedTicketDeatils]
-class BookedTicketDeatils extends _i12.PageRouteInfo<void> {
-  const BookedTicketDeatils({List<_i12.PageRouteInfo>? children})
+/// [_i1.AddToCartPage]
+class AddToCartRoute extends _i13.PageRouteInfo<void> {
+  const AddToCartRoute({List<_i13.PageRouteInfo>? children})
+      : super(
+          AddToCartRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddToCartRoute';
+
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.BookedTicketDeatils]
+class BookedTicketDeatils extends _i13.PageRouteInfo<void> {
+  const BookedTicketDeatils({List<_i13.PageRouteInfo>? children})
       : super(
           BookedTicketDeatils.name,
           initialChildren: children,
@@ -126,13 +148,13 @@ class BookedTicketDeatils extends _i12.PageRouteInfo<void> {
 
   static const String name = 'BookedTicketDeatils';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.CartPage]
-class CartRoute extends _i12.PageRouteInfo<void> {
-  const CartRoute({List<_i12.PageRouteInfo>? children})
+/// [_i3.CartPage]
+class CartRoute extends _i13.PageRouteInfo<void> {
+  const CartRoute({List<_i13.PageRouteInfo>? children})
       : super(
           CartRoute.name,
           initialChildren: children,
@@ -140,13 +162,13 @@ class CartRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'CartRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.CheckoutPage]
-class CheckoutRoute extends _i12.PageRouteInfo<void> {
-  const CheckoutRoute({List<_i12.PageRouteInfo>? children})
+/// [_i4.CheckoutPage]
+class CheckoutRoute extends _i13.PageRouteInfo<void> {
+  const CheckoutRoute({List<_i13.PageRouteInfo>? children})
       : super(
           CheckoutRoute.name,
           initialChildren: children,
@@ -154,16 +176,16 @@ class CheckoutRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'CheckoutRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.CustomWebPage]
-class CustomWebRoute extends _i12.PageRouteInfo<CustomWebRouteArgs> {
+/// [_i5.CustomWebPage]
+class CustomWebRoute extends _i13.PageRouteInfo<CustomWebRouteArgs> {
   CustomWebRoute({
-    _i13.Key? key,
+    _i14.Key? key,
     required String endPoint,
-    List<_i12.PageRouteInfo>? children,
+    List<_i13.PageRouteInfo>? children,
   }) : super(
           CustomWebRoute.name,
           args: CustomWebRouteArgs(
@@ -175,8 +197,8 @@ class CustomWebRoute extends _i12.PageRouteInfo<CustomWebRouteArgs> {
 
   static const String name = 'CustomWebRoute';
 
-  static const _i12.PageInfo<CustomWebRouteArgs> page =
-      _i12.PageInfo<CustomWebRouteArgs>(name);
+  static const _i13.PageInfo<CustomWebRouteArgs> page =
+      _i13.PageInfo<CustomWebRouteArgs>(name);
 }
 
 class CustomWebRouteArgs {
@@ -185,7 +207,7 @@ class CustomWebRouteArgs {
     required this.endPoint,
   });
 
-  final _i13.Key? key;
+  final _i14.Key? key;
 
   final String endPoint;
 
@@ -196,9 +218,9 @@ class CustomWebRouteArgs {
 }
 
 /// generated route for
-/// [_i5.DashBoard]
-class DashBoard extends _i12.PageRouteInfo<void> {
-  const DashBoard({List<_i12.PageRouteInfo>? children})
+/// [_i6.DashBoard]
+class DashBoard extends _i13.PageRouteInfo<void> {
+  const DashBoard({List<_i13.PageRouteInfo>? children})
       : super(
           DashBoard.name,
           initialChildren: children,
@@ -206,17 +228,17 @@ class DashBoard extends _i12.PageRouteInfo<void> {
 
   static const String name = 'DashBoard';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i6.DetailedMostPopularPage]
+/// [_i7.DetailedMostPopularPage]
 class DetailedMostPopularRoute
-    extends _i12.PageRouteInfo<DetailedMostPopularRouteArgs> {
+    extends _i13.PageRouteInfo<DetailedMostPopularRouteArgs> {
   DetailedMostPopularRoute({
-    _i13.Key? key,
+    _i14.Key? key,
     required String title,
-    List<_i12.PageRouteInfo>? children,
+    List<_i13.PageRouteInfo>? children,
   }) : super(
           DetailedMostPopularRoute.name,
           args: DetailedMostPopularRouteArgs(
@@ -228,8 +250,8 @@ class DetailedMostPopularRoute
 
   static const String name = 'DetailedMostPopularRoute';
 
-  static const _i12.PageInfo<DetailedMostPopularRouteArgs> page =
-      _i12.PageInfo<DetailedMostPopularRouteArgs>(name);
+  static const _i13.PageInfo<DetailedMostPopularRouteArgs> page =
+      _i13.PageInfo<DetailedMostPopularRouteArgs>(name);
 }
 
 class DetailedMostPopularRouteArgs {
@@ -238,7 +260,7 @@ class DetailedMostPopularRouteArgs {
     required this.title,
   });
 
-  final _i13.Key? key;
+  final _i14.Key? key;
 
   final String title;
 
@@ -249,9 +271,9 @@ class DetailedMostPopularRouteArgs {
 }
 
 /// generated route for
-/// [_i7.EventDetails]
-class EventDetails extends _i12.PageRouteInfo<void> {
-  const EventDetails({List<_i12.PageRouteInfo>? children})
+/// [_i8.EventDetails]
+class EventDetails extends _i13.PageRouteInfo<void> {
+  const EventDetails({List<_i13.PageRouteInfo>? children})
       : super(
           EventDetails.name,
           initialChildren: children,
@@ -259,13 +281,13 @@ class EventDetails extends _i12.PageRouteInfo<void> {
 
   static const String name = 'EventDetails';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.LoginPage]
-class LoginRoute extends _i12.PageRouteInfo<void> {
-  const LoginRoute({List<_i12.PageRouteInfo>? children})
+/// [_i9.LoginPage]
+class LoginRoute extends _i13.PageRouteInfo<void> {
+  const LoginRoute({List<_i13.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -273,13 +295,13 @@ class LoginRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i9.ProfilePage]
-class ProfileRoute extends _i12.PageRouteInfo<void> {
-  const ProfileRoute({List<_i12.PageRouteInfo>? children})
+/// [_i10.ProfilePage]
+class ProfileRoute extends _i13.PageRouteInfo<void> {
+  const ProfileRoute({List<_i13.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -287,13 +309,13 @@ class ProfileRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i10.SignUpPage]
-class SignUpRoute extends _i12.PageRouteInfo<void> {
-  const SignUpRoute({List<_i12.PageRouteInfo>? children})
+/// [_i11.SignUpPage]
+class SignUpRoute extends _i13.PageRouteInfo<void> {
+  const SignUpRoute({List<_i13.PageRouteInfo>? children})
       : super(
           SignUpRoute.name,
           initialChildren: children,
@@ -301,13 +323,13 @@ class SignUpRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'SignUpRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i11.SplashPage]
-class SplashRoute extends _i12.PageRouteInfo<void> {
-  const SplashRoute({List<_i12.PageRouteInfo>? children})
+/// [_i12.SplashPage]
+class SplashRoute extends _i13.PageRouteInfo<void> {
+  const SplashRoute({List<_i13.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -315,5 +337,5 @@ class SplashRoute extends _i12.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+  static const _i13.PageInfo<void> page = _i13.PageInfo<void>(name);
 }

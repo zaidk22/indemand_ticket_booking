@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_tickets/widgets/ticket_tile.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 import '../../../../core/constants/color_constants.dart';
 

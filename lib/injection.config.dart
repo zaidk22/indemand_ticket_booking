@@ -13,7 +13,7 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart' as _i8;
 import 'package:indemand_ticket_booking/application/dashboard/base_bloc.dart'
     as _i3;
-import 'package:indemand_ticket_booking/application/latestEvents/latest_event_bloc.dart'
+import 'package:indemand_ticket_booking/application/Events/latest_event_bloc.dart'
     as _i9;
 import 'package:indemand_ticket_booking/application/timer/timer_bloc.dart'
     as _i7;

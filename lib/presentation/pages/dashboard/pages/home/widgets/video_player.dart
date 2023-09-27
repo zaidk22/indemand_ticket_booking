@@ -9,10 +9,11 @@ class VideoBackgroundScreen extends StatefulWidget {
   final Size deviceSize;
 
   @override
-  _VideoBackgroundScreenState createState() => _VideoBackgroundScreenState();
+ 
+  VideoBackgroundScreenState createState() => VideoBackgroundScreenState();
 }
 
-class _VideoBackgroundScreenState extends State<VideoBackgroundScreen> {
+class VideoBackgroundScreenState extends State<VideoBackgroundScreen> {
   late Future<void> _initializeControllerFuture;
   VideoPlayerController? _controller;
   late String _localVideoPath;

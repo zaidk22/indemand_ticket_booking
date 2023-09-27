@@ -6,6 +6,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/image_consta
 import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_auth_button.dart';
 import 'package:indemand_ticket_booking/presentation/pages/event_details/widgets/event_details_card.dart';
 import 'package:indemand_ticket_booking/presentation/pages/event_details/widgets/tab_view.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 import 'widgets/image_details_widget.dart';
 
@@ -41,7 +42,11 @@ class EventDetails extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("from Rs 100",style: CustomTextStyle.subtitleBlackMinTextStyle,),
-            const CustomAuthButton(text: "Book Now")
+            CustomAuthButton(text: "Book Now",
+            onTap: () {
+                AutoRouter.of(context).push(const AddToCartRoute());
+            },
+            )
           ],
         ),
       ),

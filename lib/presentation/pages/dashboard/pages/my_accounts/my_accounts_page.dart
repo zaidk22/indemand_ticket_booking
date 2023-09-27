@@ -7,7 +7,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/color_consta
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_accounts/widgets/info_card.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class MyAccountsPage extends StatelessWidget {

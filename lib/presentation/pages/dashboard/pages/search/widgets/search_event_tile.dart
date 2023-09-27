@@ -18,7 +18,9 @@ class SearchEventTile extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: CachedNetworkImage(imageUrl: ImageConstant.dummyNetworkImage),
+            child: CachedNetworkImage(imageUrl: ImageConstant.dummyNetworkImage,
+           
+            ),
           ),
         const  SizedBox(width: 10,),
           Expanded(

@@ -2,9 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:indemand_ticket_booking/application/latestEvents/latest_event_bloc.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:indemand_ticket_booking/application/Events/latest_event_bloc.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 import '../../../../../core/constants/custom_textstyle.dart';
 import '../../../../../core/constants/image_constant.dart';

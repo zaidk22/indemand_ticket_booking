@@ -7,7 +7,7 @@ import 'package:indemand_ticket_booking/presentation/core/constants/custom_texts
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_auth_button.dart';
 import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_form_field.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {

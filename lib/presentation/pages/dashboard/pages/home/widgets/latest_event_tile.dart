@@ -5,7 +5,7 @@ import 'package:indemand_ticket_booking/domain/latest_events/latest_event_model.
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
-import 'package:indemand_ticket_booking/presentation/routes/routes.gr.dart';
+import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 
 
@@ -26,7 +26,7 @@ class LatestEventTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         AutoRouter.of(context).push(const EventDetails());
       },
@@ -34,7 +34,7 @@ class LatestEventTile extends StatelessWidget {
         decoration: BoxDecoration(
             //  color: Colors.red,
             borderRadius: BorderRadius.circular(20)),
-        margin: const EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         width: deviceSize.width * 0.5,
         child: Column(
           children: [
