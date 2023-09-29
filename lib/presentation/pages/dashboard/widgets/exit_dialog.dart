@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 class ExitConfirmationDialog extends StatelessWidget {
@@ -18,7 +21,12 @@ class ExitConfirmationDialog extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.of(context).pop(true); // Dismiss the dialog and exit the app
+         if(Platform.isAndroid){
+          SystemNavigator.pop();
+         }
+         else {
+          exit(0);
+         }
           },
           child: const Text('Yes'),
         ),

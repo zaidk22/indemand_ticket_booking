@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
+import 'package:indemand_ticket_booking/presentation/core/utils/shimmer/image_shimmer.dart';
 
 class SearchEventTile extends StatelessWidget {
   const SearchEventTile({super.key});
@@ -18,7 +19,9 @@ class SearchEventTile extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: CachedNetworkImage(imageUrl: ImageConstant.dummyNetworkImage,
+            child: CachedNetworkImage(
+               placeholder:  (_, __) => const ImageShimmer(),
+              imageUrl: ImageConstant.dummyNetworkImage,
            
             ),
           ),

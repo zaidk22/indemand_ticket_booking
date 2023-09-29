@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:indemand_ticket_booking/presentation/pages/booked_ticket_details/widgets/download_pdf.dart';
 import 'package:indemand_ticket_booking/presentation/pages/booked_ticket_details/widgets/ticket_clipper.dart';
-import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/my_tickets/widgets/ticket_clipper.dart';
 
 import '../../../core/constants/custom_textstyle.dart';
 import '../../auth/widgets/custom_auth_button.dart';
@@ -84,7 +84,11 @@ class BookedTicketTile extends StatelessWidget {
                                   const SizedBox(
                                     height: 20,
                                   ),
-                                  CustomAuthButton(onTap: () {}, text: 'Download Ticket'),
+                                  CustomAuthButton(onTap: () {
+                                    showDialog(context: context, builder: (context) {
+                                 return     DownloadDialog();
+                                    },);
+                                  }, text: 'Download Ticket'),
                                      
                                   // const SizedBox(
                                   //   height: 5,

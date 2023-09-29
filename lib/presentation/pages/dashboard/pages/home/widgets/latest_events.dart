@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:indemand_ticket_booking/application/Events/latest_event_bloc.dart';
+import 'package:indemand_ticket_booking/application/Events/event_bloc.dart';
 
 import 'package:indemand_ticket_booking/presentation/pages/dashboard/pages/home/widgets/latest_event_tile.dart';
 

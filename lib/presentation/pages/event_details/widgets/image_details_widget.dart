@@ -3,14 +3,19 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
+import 'package:indemand_ticket_booking/presentation/core/utils/shimmer/image_shimmer.dart';
 
 import '../../../core/constants/image_constant.dart';
 
 class EventImageWidget extends StatelessWidget {
   const EventImageWidget({super.key,
-  required this.deviceSize
+  required this.deviceSize,
+  this.imageUrl,
+  this.shareUrl
   });
   final Size deviceSize ;
+  final String? imageUrl;
+  final String? shareUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +25,9 @@ class EventImageWidget extends StatelessWidget {
              child: Stack(
              children: [
               CachedNetworkImage(
+                 placeholder:  (_, __) => const ImageShimmer(),
                 imageUrl: 
-                ImageConstant.dummyNetworkImage,
+               imageUrl ?? ImageConstant.dummyNetworkImage,
               fit: BoxFit.cover,
               width: double.infinity,
               ),

@@ -17,7 +17,7 @@ class SplashPage extends StatelessWidget {
     final deviceSize = MediaQuery.sizeOf(context);
     return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
-      
+          
           state.authFailureOrSuccessOption.fold(
             () => null,
             (some) => some.fold(

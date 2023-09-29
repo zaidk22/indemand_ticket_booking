@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
-import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/pages/auth/widgets/custom_form_field.dart';
 
 import 'date_of_birth.dart';
@@ -8,37 +6,38 @@ import 'gender.dart';
 
 
 class PersonalInfo extends StatelessWidget {
-  const PersonalInfo({super.key});
+  const PersonalInfo({super.key,
+  required this.controller
+  });
+
+  final ScrollController controller;
 
   @override
   Widget build(BuildContext context) {
-    return  ExpansionTile(
-          collapsedIconColor: CustomColor.whiteColor, 
-     iconColor: CustomColor.whiteColor,
-            title: Text(
-                'Personal Information',
-                style: CustomTextStyle.titleTextStyle,
-              
-            ),
-            children: [
- const CustomFormField(hintText: 'First Name'),
-          const SizedBox(
+    return  Column(
+      // controller: controller,
+      //    shrinkWrap: true,
+
+      //    physics: const BouncingScrollPhysics(),
+            children: const [
+ CustomFormField(hintText: 'First Name'),
+          SizedBox(
             height: 2,
           ),
-          const CustomFormField(hintText: 'Last Name'),
-          const SizedBox(
+          CustomFormField(hintText: 'Last Name'),
+          SizedBox(
             height: 2,
           ),
-          const GenderSelection(),
-          const SizedBox(
+          GenderSelection(),
+          SizedBox(
             height: 2,
           ),
-          const CustomFormField(hintText: 'Nationality'),
-          const SizedBox(
+          CustomFormField(hintText: 'Nationality'),
+          SizedBox(
             height: 2,
           ),
-          const DobWidget(),
-          const SizedBox(
+          DobWidget(),
+          SizedBox(
             height: 10,
           ),
             ],

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
+import 'package:indemand_ticket_booking/presentation/core/utils/shimmer/image_shimmer.dart';
 
 
 class TicketTile extends StatelessWidget {
@@ -24,6 +25,7 @@ class TicketTile extends StatelessWidget {
                     borderRadius:
                         const BorderRadius.vertical(top: Radius.circular(10)),
                     child: CachedNetworkImage(
+                       placeholder:  (_, __) => const ImageShimmer(),
                      imageUrl:  ImageConstant.dummyNetworkImage,
                       fit: BoxFit.cover,
                       height: deviceSize.height * 0.12,

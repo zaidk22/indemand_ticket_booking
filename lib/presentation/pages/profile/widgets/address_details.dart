@@ -9,14 +9,9 @@ class AddressDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExpansionTile(
-          collapsedIconColor: CustomColor.whiteColor, 
-     iconColor: CustomColor.whiteColor,
-        title: Text(
-                'Address Details',
-                style: CustomTextStyle.titleTextStyle,
-              
-            ),
+    return ListView(
+        shrinkWrap: true,
+         physics: BouncingScrollPhysics(),
             children: const [
                CustomFormField(hintText: 'House Number'),
           SizedBox(

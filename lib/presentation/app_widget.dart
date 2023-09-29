@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:indemand_ticket_booking/application/Events/latest_event_bloc.dart';
+import 'package:indemand_ticket_booking/application/Events/event_bloc.dart';
 import 'package:indemand_ticket_booking/application/auth/auth_bloc.dart';
 import 'package:indemand_ticket_booking/application/timer/timer_bloc.dart';
 import 'package:indemand_ticket_booking/injection.dart';
@@ -33,7 +33,8 @@ class AppWigdet extends StatelessWidget {
 
           BlocProvider(create: (context) {
          return getIt<EventsBloc>()..add(const EventsEvent.getLatestEvents([]))
-         ..add(const EventsEvent.getPopularEvents([]));
+         ..add(const EventsEvent.getPopularEvents([]))
+         ..add(const EventsEvent.getEventDetails(id: 1));
         },),
       ],
     

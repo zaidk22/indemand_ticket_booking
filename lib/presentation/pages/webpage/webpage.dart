@@ -20,6 +20,7 @@ class CustomWebPage extends StatelessWidget {
     NavigationDelegate(
       onProgress: (int progress) {
         // Update loading bar.
+     
       },
       onPageStarted: (String url) {},
       onPageFinished: (String url) {},
@@ -34,7 +35,7 @@ class CustomWebPage extends StatelessWidget {
       },
     ),
   )
-  ..loadRequest(Uri.parse(ApiConstants.baseUrl + endPoint));
+  ..loadRequest(Uri.parse(ApiConstants.baseUrl1 + endPoint));
 
     return SafeArea(
       child: Scaffold(

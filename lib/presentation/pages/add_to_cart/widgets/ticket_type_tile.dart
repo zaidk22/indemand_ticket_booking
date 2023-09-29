@@ -25,7 +25,7 @@ class TicketTypeTile extends StatelessWidget {
              const SizedBox(height: 10,),
             Text(
               'EARLY BIRD',
-              style: CustomTextStyle.titleTextStyle,
+              style: CustomTextStyle.labelTextStyle,
             ),
             const SizedBox(
               height: 10,
@@ -34,7 +34,7 @@ class TicketTypeTile extends StatelessWidget {
               '\$ 40.00',
               style: CustomTextStyle.subtitleTextStyle,
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 2,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -44,7 +44,7 @@ class TicketTypeTile extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                     
+               
                       backgroundColor: const MaterialStatePropertyAll(
                           CustomColor.appBackbroundColor),
                       iconColor: const MaterialStatePropertyAll(
@@ -54,7 +54,7 @@ class TicketTypeTile extends StatelessWidget {
                         const CircleBorder(),
                       ),
                     ),
-                    child: const Icon(Icons.remove),
+                    child: const Icon(Icons.remove,size: 15,),
                   ),
                 ),
                 Expanded(
@@ -62,7 +62,7 @@ class TicketTypeTile extends StatelessWidget {
                       alignment: AlignmentDirectional.center,
                       child: Text(
                         '1',
-                        style: CustomTextStyle.appTitleTextStyle,
+                        style: CustomTextStyle.titleTextStyle,
                       )),
                 ),
                 Align(
@@ -70,6 +70,7 @@ class TicketTypeTile extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
+                        
                       backgroundColor: const MaterialStatePropertyAll(
                           CustomColor.appBackbroundColor),
                       iconColor: const MaterialStatePropertyAll(
@@ -79,7 +80,7 @@ class TicketTypeTile extends StatelessWidget {
                         const CircleBorder(),
                       ),
                     ),
-                    child: const Icon(Icons.add),
+                    child: const Icon(Icons.add,size: 15,),
                   ),
                 ),
               ],

@@ -1,10 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:indemand_ticket_booking/domain/latest_events/latest_event_model.dart';
+import 'package:indemand_ticket_booking/domain/events/latest_event_model.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/share_file.dart';
+import 'package:indemand_ticket_booking/presentation/core/utils/shimmer/image_shimmer.dart';
 import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 
@@ -50,6 +51,7 @@ class LatestEventTile extends StatelessWidget {
                       borderRadius: const BorderRadius.vertical(
                           top: Radius.circular(10)),
                       child: CachedNetworkImage(
+                        placeholder:  (_, __) => const ImageShimmer(),
                         imageUrl: data?.imageUrl ??'${ImageConstant.dummyNetworkImage}',
                         fit: BoxFit.cover,
                       ),

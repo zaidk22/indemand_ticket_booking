@@ -1,4 +1,4 @@
-part of 'latest_event_bloc.dart';
+part of 'event_bloc.dart';
 
 @freezed
 class EventsState with _$EventsState {
@@ -7,11 +7,15 @@ class EventsState with _$EventsState {
     required bool isShimmerEnable,
     required List<LatestEventsModel> latestEventList,
     required List<PopularEventsModel> popularEventList,
+     required List<PopularEventsModel> eventDetails,
+    
   }) = _EventsState;
 
   factory EventsState.initial() => const EventsState(
       isLoading: false,
       isShimmerEnable: false,
       latestEventList: [],
-      popularEventList: []);
+      popularEventList: [],
+      eventDetails: []
+      );
 }

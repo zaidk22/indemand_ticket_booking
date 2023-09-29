@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'latest_event_bloc.dart';
+part of 'event_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -16,23 +16,25 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$EventsEvent {
-  List<Equatable> get events => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(List<LatestEventsModel> events) getLatestEvents,
     required TResult Function(List<PopularEventsModel> events) getPopularEvents,
+    required TResult Function(int id) getEventDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult? Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult? Function(int id)? getEventDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult Function(int id)? getEventDetails,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,18 +42,21 @@ mixin _$EventsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetLatestEvents value) getLatestEvents,
     required TResult Function(_GetPopularEvents value) getPopularEvents,
+    required TResult Function(_GetDetailedEvent value) getEventDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetLatestEvents value)? getLatestEvents,
     TResult? Function(_GetPopularEvents value)? getPopularEvents,
+    TResult? Function(_GetDetailedEvent value)? getEventDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetLatestEvents value)? getLatestEvents,
     TResult Function(_GetPopularEvents value)? getPopularEvents,
+    TResult Function(_GetDetailedEvent value)? getEventDetails,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,6 +153,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult when<TResult extends Object?>({
     required TResult Function(List<LatestEventsModel> events) getLatestEvents,
     required TResult Function(List<PopularEventsModel> events) getPopularEvents,
+    required TResult Function(int id) getEventDetails,
   }) {
     return getLatestEvents(events);
   }
@@ -157,6 +163,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult? Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult? Function(int id)? getEventDetails,
   }) {
     return getLatestEvents?.call(events);
   }
@@ -166,6 +173,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult Function(int id)? getEventDetails,
     required TResult orElse(),
   }) {
     if (getLatestEvents != null) {
@@ -179,6 +187,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetLatestEvents value) getLatestEvents,
     required TResult Function(_GetPopularEvents value) getPopularEvents,
+    required TResult Function(_GetDetailedEvent value) getEventDetails,
   }) {
     return getLatestEvents(this);
   }
@@ -188,6 +197,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetLatestEvents value)? getLatestEvents,
     TResult? Function(_GetPopularEvents value)? getPopularEvents,
+    TResult? Function(_GetDetailedEvent value)? getEventDetails,
   }) {
     return getLatestEvents?.call(this);
   }
@@ -197,6 +207,7 @@ class _$_GetLatestEvents implements _GetLatestEvents {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetLatestEvents value)? getLatestEvents,
     TResult Function(_GetPopularEvents value)? getPopularEvents,
+    TResult Function(_GetDetailedEvent value)? getEventDetails,
     required TResult orElse(),
   }) {
     if (getLatestEvents != null) {
@@ -210,7 +221,6 @@ abstract class _GetLatestEvents implements EventsEvent {
   const factory _GetLatestEvents(final List<LatestEventsModel> events) =
       _$_GetLatestEvents;
 
-  @override
   List<LatestEventsModel> get events;
   @JsonKey(ignore: true)
   _$$_GetLatestEventsCopyWith<_$_GetLatestEvents> get copyWith =>
@@ -290,6 +300,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult when<TResult extends Object?>({
     required TResult Function(List<LatestEventsModel> events) getLatestEvents,
     required TResult Function(List<PopularEventsModel> events) getPopularEvents,
+    required TResult Function(int id) getEventDetails,
   }) {
     return getPopularEvents(events);
   }
@@ -299,6 +310,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult? Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult? Function(int id)? getEventDetails,
   }) {
     return getPopularEvents?.call(events);
   }
@@ -308,6 +320,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<LatestEventsModel> events)? getLatestEvents,
     TResult Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult Function(int id)? getEventDetails,
     required TResult orElse(),
   }) {
     if (getPopularEvents != null) {
@@ -321,6 +334,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetLatestEvents value) getLatestEvents,
     required TResult Function(_GetPopularEvents value) getPopularEvents,
+    required TResult Function(_GetDetailedEvent value) getEventDetails,
   }) {
     return getPopularEvents(this);
   }
@@ -330,6 +344,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetLatestEvents value)? getLatestEvents,
     TResult? Function(_GetPopularEvents value)? getPopularEvents,
+    TResult? Function(_GetDetailedEvent value)? getEventDetails,
   }) {
     return getPopularEvents?.call(this);
   }
@@ -339,6 +354,7 @@ class _$_GetPopularEvents implements _GetPopularEvents {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetLatestEvents value)? getLatestEvents,
     TResult Function(_GetPopularEvents value)? getPopularEvents,
+    TResult Function(_GetDetailedEvent value)? getEventDetails,
     required TResult orElse(),
   }) {
     if (getPopularEvents != null) {
@@ -352,10 +368,149 @@ abstract class _GetPopularEvents implements EventsEvent {
   const factory _GetPopularEvents(final List<PopularEventsModel> events) =
       _$_GetPopularEvents;
 
-  @override
   List<PopularEventsModel> get events;
   @JsonKey(ignore: true)
   _$$_GetPopularEventsCopyWith<_$_GetPopularEvents> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetDetailedEventCopyWith<$Res> {
+  factory _$$_GetDetailedEventCopyWith(
+          _$_GetDetailedEvent value, $Res Function(_$_GetDetailedEvent) then) =
+      __$$_GetDetailedEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$_GetDetailedEventCopyWithImpl<$Res>
+    extends _$EventsEventCopyWithImpl<$Res, _$_GetDetailedEvent>
+    implements _$$_GetDetailedEventCopyWith<$Res> {
+  __$$_GetDetailedEventCopyWithImpl(
+      _$_GetDetailedEvent _value, $Res Function(_$_GetDetailedEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$_GetDetailedEvent(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetDetailedEvent implements _GetDetailedEvent {
+  const _$_GetDetailedEvent({required this.id});
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'EventsEvent.getEventDetails(id: $id)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetDetailedEvent &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetDetailedEventCopyWith<_$_GetDetailedEvent> get copyWith =>
+      __$$_GetDetailedEventCopyWithImpl<_$_GetDetailedEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<LatestEventsModel> events) getLatestEvents,
+    required TResult Function(List<PopularEventsModel> events) getPopularEvents,
+    required TResult Function(int id) getEventDetails,
+  }) {
+    return getEventDetails(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<LatestEventsModel> events)? getLatestEvents,
+    TResult? Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult? Function(int id)? getEventDetails,
+  }) {
+    return getEventDetails?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<LatestEventsModel> events)? getLatestEvents,
+    TResult Function(List<PopularEventsModel> events)? getPopularEvents,
+    TResult Function(int id)? getEventDetails,
+    required TResult orElse(),
+  }) {
+    if (getEventDetails != null) {
+      return getEventDetails(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetLatestEvents value) getLatestEvents,
+    required TResult Function(_GetPopularEvents value) getPopularEvents,
+    required TResult Function(_GetDetailedEvent value) getEventDetails,
+  }) {
+    return getEventDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetLatestEvents value)? getLatestEvents,
+    TResult? Function(_GetPopularEvents value)? getPopularEvents,
+    TResult? Function(_GetDetailedEvent value)? getEventDetails,
+  }) {
+    return getEventDetails?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetLatestEvents value)? getLatestEvents,
+    TResult Function(_GetPopularEvents value)? getPopularEvents,
+    TResult Function(_GetDetailedEvent value)? getEventDetails,
+    required TResult orElse(),
+  }) {
+    if (getEventDetails != null) {
+      return getEventDetails(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetDetailedEvent implements EventsEvent {
+  const factory _GetDetailedEvent({required final int id}) =
+      _$_GetDetailedEvent;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$_GetDetailedEventCopyWith<_$_GetDetailedEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -366,6 +521,8 @@ mixin _$EventsState {
   List<LatestEventsModel> get latestEventList =>
       throw _privateConstructorUsedError;
   List<PopularEventsModel> get popularEventList =>
+      throw _privateConstructorUsedError;
+  List<PopularEventsModel> get eventDetails =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -383,7 +540,8 @@ abstract class $EventsStateCopyWith<$Res> {
       {bool isLoading,
       bool isShimmerEnable,
       List<LatestEventsModel> latestEventList,
-      List<PopularEventsModel> popularEventList});
+      List<PopularEventsModel> popularEventList,
+      List<PopularEventsModel> eventDetails});
 }
 
 /// @nodoc
@@ -403,6 +561,7 @@ class _$EventsStateCopyWithImpl<$Res, $Val extends EventsState>
     Object? isShimmerEnable = null,
     Object? latestEventList = null,
     Object? popularEventList = null,
+    Object? eventDetails = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -421,6 +580,10 @@ class _$EventsStateCopyWithImpl<$Res, $Val extends EventsState>
           ? _value.popularEventList
           : popularEventList // ignore: cast_nullable_to_non_nullable
               as List<PopularEventsModel>,
+      eventDetails: null == eventDetails
+          ? _value.eventDetails
+          : eventDetails // ignore: cast_nullable_to_non_nullable
+              as List<PopularEventsModel>,
     ) as $Val);
   }
 }
@@ -437,7 +600,8 @@ abstract class _$$_EventsStateCopyWith<$Res>
       {bool isLoading,
       bool isShimmerEnable,
       List<LatestEventsModel> latestEventList,
-      List<PopularEventsModel> popularEventList});
+      List<PopularEventsModel> popularEventList,
+      List<PopularEventsModel> eventDetails});
 }
 
 /// @nodoc
@@ -455,6 +619,7 @@ class __$$_EventsStateCopyWithImpl<$Res>
     Object? isShimmerEnable = null,
     Object? latestEventList = null,
     Object? popularEventList = null,
+    Object? eventDetails = null,
   }) {
     return _then(_$_EventsState(
       isLoading: null == isLoading
@@ -473,6 +638,10 @@ class __$$_EventsStateCopyWithImpl<$Res>
           ? _value._popularEventList
           : popularEventList // ignore: cast_nullable_to_non_nullable
               as List<PopularEventsModel>,
+      eventDetails: null == eventDetails
+          ? _value._eventDetails
+          : eventDetails // ignore: cast_nullable_to_non_nullable
+              as List<PopularEventsModel>,
     ));
   }
 }
@@ -484,9 +653,11 @@ class _$_EventsState implements _EventsState {
       {required this.isLoading,
       required this.isShimmerEnable,
       required final List<LatestEventsModel> latestEventList,
-      required final List<PopularEventsModel> popularEventList})
+      required final List<PopularEventsModel> popularEventList,
+      required final List<PopularEventsModel> eventDetails})
       : _latestEventList = latestEventList,
-        _popularEventList = popularEventList;
+        _popularEventList = popularEventList,
+        _eventDetails = eventDetails;
 
   @override
   final bool isLoading;
@@ -509,9 +680,17 @@ class _$_EventsState implements _EventsState {
     return EqualUnmodifiableListView(_popularEventList);
   }
 
+  final List<PopularEventsModel> _eventDetails;
+  @override
+  List<PopularEventsModel> get eventDetails {
+    if (_eventDetails is EqualUnmodifiableListView) return _eventDetails;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventDetails);
+  }
+
   @override
   String toString() {
-    return 'EventsState(isLoading: $isLoading, isShimmerEnable: $isShimmerEnable, latestEventList: $latestEventList, popularEventList: $popularEventList)';
+    return 'EventsState(isLoading: $isLoading, isShimmerEnable: $isShimmerEnable, latestEventList: $latestEventList, popularEventList: $popularEventList, eventDetails: $eventDetails)';
   }
 
   @override
@@ -526,7 +705,9 @@ class _$_EventsState implements _EventsState {
             const DeepCollectionEquality()
                 .equals(other._latestEventList, _latestEventList) &&
             const DeepCollectionEquality()
-                .equals(other._popularEventList, _popularEventList));
+                .equals(other._popularEventList, _popularEventList) &&
+            const DeepCollectionEquality()
+                .equals(other._eventDetails, _eventDetails));
   }
 
   @override
@@ -535,7 +716,8 @@ class _$_EventsState implements _EventsState {
       isLoading,
       isShimmerEnable,
       const DeepCollectionEquality().hash(_latestEventList),
-      const DeepCollectionEquality().hash(_popularEventList));
+      const DeepCollectionEquality().hash(_popularEventList),
+      const DeepCollectionEquality().hash(_eventDetails));
 
   @JsonKey(ignore: true)
   @override
@@ -546,11 +728,11 @@ class _$_EventsState implements _EventsState {
 
 abstract class _EventsState implements EventsState {
   const factory _EventsState(
-          {required final bool isLoading,
-          required final bool isShimmerEnable,
-          required final List<LatestEventsModel> latestEventList,
-          required final List<PopularEventsModel> popularEventList}) =
-      _$_EventsState;
+      {required final bool isLoading,
+      required final bool isShimmerEnable,
+      required final List<LatestEventsModel> latestEventList,
+      required final List<PopularEventsModel> popularEventList,
+      required final List<PopularEventsModel> eventDetails}) = _$_EventsState;
 
   @override
   bool get isLoading;
@@ -560,6 +742,8 @@ abstract class _EventsState implements EventsState {
   List<LatestEventsModel> get latestEventList;
   @override
   List<PopularEventsModel> get popularEventList;
+  @override
+  List<PopularEventsModel> get eventDetails;
   @override
   @JsonKey(ignore: true)
   _$$_EventsStateCopyWith<_$_EventsState> get copyWith =>

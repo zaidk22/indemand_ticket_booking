@@ -9,14 +9,10 @@ class ContactInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExpansionTile(
-          collapsedIconColor: CustomColor.whiteColor, 
-     iconColor: CustomColor.whiteColor,
-        title: Text(
-                'Contact Information',
-                style: CustomTextStyle.titleTextStyle,
-              
-            ),
+    return ListView(
+      shrinkWrap: true,
+         physics: BouncingScrollPhysics(),
+     
             children: const [
                CustomFormField(hintText: 'Email'),
           SizedBox(

@@ -2,7 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:indemand_ticket_booking/application/Events/latest_event_bloc.dart';
+import 'package:indemand_ticket_booking/application/Events/event_bloc.dart';
+import 'package:indemand_ticket_booking/presentation/core/utils/shimmer/image_shimmer.dart';
 import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 import '../../../../../core/constants/custom_textstyle.dart';
@@ -40,9 +41,11 @@ class MostPopular extends StatelessWidget {
   child: ClipRRect(
     borderRadius: BorderRadius.circular(8.0),
     child: CachedNetworkImage(
+      
+      placeholder:  (_, __) => const ImageShimmer(),
             imageUrl: state.popularEventList[index].image_url ??
-                "${ImageConstant.dummyNetworkImage}",
-             fit: BoxFit.contain,
+                ImageConstant.dummyNetworkImage,
+             fit: BoxFit.cover
           ),
   ),
 ),
