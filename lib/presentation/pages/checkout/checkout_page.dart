@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:accordion/accordion.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -73,7 +74,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 BlocListener<TimerBloc, TimerState>(
                   listener: (context, state) {
                   if(state.countDownTimer==0){
-                    AutoRouter.of(context).replace(DashBoard());
+                    AutoRouter.of(context).replace(const DashBoard());
                   }
                   },
                   child: BlocBuilder<TimerBloc, TimerState>(
@@ -89,18 +90,51 @@ class _CheckoutPageState extends State<CheckoutPage> {
               ],
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: AttendeesWidget(),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: BillingInfo(),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: OrderReview(),
-          )
+
+           Accordion(
+              
+               headerBorderColor: CustomColor.containerColor,
+            headerBorderColorOpened: Colors.transparent,
+            headerBackgroundColor: CustomColor.containerColor,
+            // headerBorderWidth: 1,
+            headerBackgroundColorOpened: Colors.orange,
+            contentBackgroundColor: CustomColor.appBackbroundColor,
+            contentBorderColor: Colors.green,
+            contentBorderWidth: 3,
+            contentHorizontalPadding: 20,
+            scaleWhenAnimating: true,
+            openAndCloseAnimation: true,
+            headerPadding:
+                const EdgeInsets.symmetric(vertical: 7, horizontal: 15),
+              children: [
+         AccordionSection(
+                contentVerticalPadding: 20,
+                leftIcon:
+                    const Icon(Icons.person_2, color: Colors.white),
+                header:  Text('Please enter name of all Attendees', style: CustomTextStyle.labelTextStyle),
+                content:  const SingleChildScrollView(
+                
+            
+                  child: AttendeesWidget(),
+              )),
+           AccordionSection(
+                contentVerticalPadding: 20,
+                leftIcon:
+                    const Icon(Icons.money_rounded, color: Colors.white),
+                header:  Text('Billing information', style: CustomTextStyle.labelTextStyle),
+                content:  const  BillingInfo(),
+              ),
+                 AccordionSection(
+                contentVerticalPadding: 20,
+                leftIcon:
+                    const Icon(Icons.online_prediction_rounded, color: Colors.white),
+                header:  Text('Order Review', style: CustomTextStyle.labelTextStyle),
+                content: const OrderReview(),
+              ),
+            ]),
+          
+         
+         
         ],
       ),
       bottomNavigationBar: BottomAppBar(

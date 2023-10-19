@@ -48,7 +48,7 @@ class DashBoard extends StatelessWidget {
            
             appBar: HomeAppBar(
               title: state.selectedNavBarIndex == 0
-                  ? "Home"
+                  ? "Event"
                   : state.selectedNavBarIndex == 1
                       ? "Search"
                       : state.selectedNavBarIndex == 2

@@ -9,4 +9,6 @@ abstract class IEventsFacade{
     Future<Either<EventsFailure,List<LatestEventsModel>>> getEventList();
     Future<Either<EventsFailure,List<PopularEventsModel>>> getPopularEvents();
      Future<Either<EventsFailure,List<PopularEventsModel>>> getDeatiledEvent({required int id});
+     Future<Either<EventsFailure,List<PopularEventsModel>>>  getMyTickets();
+     Future <Either<EventsFailure,List<PopularEventsModel>>> getPopularLocations();
 }

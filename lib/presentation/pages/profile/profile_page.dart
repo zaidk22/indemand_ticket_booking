@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
          AccordionSection(
                 contentVerticalPadding: 20,
                 leftIcon:
-                    const Icon(Icons.text_fields_rounded, color: Colors.white),
+                    const Icon(Icons.person_2, color: Colors.white),
                 header:  Text('Personal Info', style: CustomTextStyle.labelTextStyle),
                 content:  SingleChildScrollView(
                   controller: controller,
@@ -62,14 +62,14 @@ class ProfilePage extends StatelessWidget {
            AccordionSection(
                 contentVerticalPadding: 20,
                 leftIcon:
-                    const Icon(Icons.text_fields_rounded, color: Colors.white),
+                    const Icon(Icons.contact_page, color: Colors.white),
                 header:  Text('Contact Info', style: CustomTextStyle.labelTextStyle),
                 content:  const ContactInfo(),
               ),
                  AccordionSection(
                 contentVerticalPadding: 20,
                 leftIcon:
-                    const Icon(Icons.text_fields_rounded, color: Colors.white),
+                    const Icon(Icons.place, color: Colors.white),
                 header:  Text('Address Details', style: CustomTextStyle.labelTextStyle),
                 content:  AddressDetails(),
               ),

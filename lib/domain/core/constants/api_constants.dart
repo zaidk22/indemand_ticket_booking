@@ -8,6 +8,7 @@ class ApiConstants {
   static const latestEvents = 'latest_events';
   static const popularEvents = 'most_popular';
   static const detailedEvent = 'most_popular';
+    static const myTickets = 'most_popular';
   static const String forgotPassword = "";
   static const String videoUrl =
       "http://staging.indemandtickets.co.uk//frontend/web/backend/images/landing_video.mp4";

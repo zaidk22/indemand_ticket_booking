@@ -8,7 +8,8 @@ class EventsState with _$EventsState {
     required List<LatestEventsModel> latestEventList,
     required List<PopularEventsModel> popularEventList,
      required List<PopularEventsModel> eventDetails,
-    
+    required List<PopularEventsModel> myTickets,
+    required List<PopularEventsModel> popularLocations,
   }) = _EventsState;
 
   factory EventsState.initial() => const EventsState(
@@ -16,6 +17,8 @@ class EventsState with _$EventsState {
       isShimmerEnable: false,
       latestEventList: [],
       popularEventList: [],
-      eventDetails: []
+      eventDetails: [],
+      myTickets: [],
+      popularLocations: []
       );
 }

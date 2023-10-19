@@ -1,12 +1,10 @@
 
 import 'package:auto_route/auto_route.dart';
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/color_constants.dart';
 import 'package:indemand_ticket_booking/presentation/core/constants/custom_textstyle.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:indemand_ticket_booking/presentation/core/constants/dimension_constants.dart';
-import 'package:indemand_ticket_booking/presentation/core/constants/image_constant.dart';
 import 'package:indemand_ticket_booking/routes/routes.gr.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
@@ -29,6 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
       //leading: Image.asset(ImageConstant.authLogoImage),
 
       title:  Text(title,style: CustomTextStyle.appTitleTextStyle,),
+      leading: const SizedBox(width: 0,),
       actions:  [
           GestureDetector(
             onTap: () =>  AutoRouter.of(context).push(const CartRoute()),

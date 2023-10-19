@@ -10,7 +10,7 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: SplashRoute.page,
             transitionsBuilder: TransitionsBuilders.slideLeft,
-            //initial: true,
+        initial: true,
             durationInMilliseconds: 500),
 
     // login 
@@ -30,7 +30,7 @@ class AppRouter extends $AppRouter {
   
         CustomRoute(
             page: DashBoard.page,
-         initial: true,
+          
             transitionsBuilder: TransitionsBuilders.slideLeft,
             durationInMilliseconds: 500),
 
@@ -49,6 +49,7 @@ class AppRouter extends $AppRouter {
             // custom web view
         CustomRoute(
             page: CustomWebRoute.page,
+
             transitionsBuilder: TransitionsBuilders.slideLeft,
             durationInMilliseconds: 500),
 

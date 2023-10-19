@@ -13,8 +13,8 @@ import 'package:indemand_ticket_booking/infrastructure/core/network/rest_api/api
 import 'package:indemand_ticket_booking/infrastructure/core/network/rest_api/api_service.dart';
 import 'package:injectable/injectable.dart';
 
-//@LazySingleton(as: IEventsFacade)
-@injectable
+@LazySingleton(as: IEventsFacade)
+//@injectable
 class EventsFacade implements IEventsFacade{
   EventsFacade();
   @override
@@ -117,6 +117,78 @@ class EventsFacade implements IEventsFacade{
 
       return left(EventsFailure.serverError(e.toString()));
     }
+  }
+  
+  @override
+  Future<Either<EventsFailure, List<PopularEventsModel>>> getMyTickets() async{
+   try{
+
+final res = await ApiService()
+          .dioUnauthorizedClient
+          .get(ApiConstants.myTickets);
+ 
+    final ticketList = (res.data as List<dynamic>)
+    .map((p) => PopularEventsModel.fromMap(p as Map<String, dynamic>))
+    .toList();
+
+      return right(ticketList);
+   }
+   on DeadlineExceededException catch (e) {
+     
+      return left(
+        EventsFailure.serverError(
+          e.toString(),
+        ),
+      );
+    } 
+    on DioException catch (e) {
+   
+      return left(
+        EventsFailure.serverError(
+     e.toString(),
+        ),
+      );
+    }
+
+   catch(e){
+    return left(EventsFailure.serverError(e.toString()));
+   }
+  }
+  
+  @override
+  Future<Either<EventsFailure, List<PopularEventsModel>>> getPopularLocations() async {
+   try{
+
+final res = await ApiService()
+          .dioUnauthorizedClient
+          .get(ApiConstants.myTickets);
+ 
+    final popularList = (res.data as List<dynamic>)
+    .map((p) => PopularEventsModel.fromMap(p as Map<String, dynamic>))
+    .toList();
+
+      return right(popularList);
+   }
+   on DeadlineExceededException catch (e) {
+     
+      return left(
+        EventsFailure.serverError(
+          e.toString(),
+        ),
+      );
+    } 
+    on DioException catch (e) {
+   
+      return left(
+        EventsFailure.serverError(
+     e.toString(),
+        ),
+      );
+    }
+
+   catch(e){
+    return left(EventsFailure.serverError(e.toString()));
+   }
   }
   
 

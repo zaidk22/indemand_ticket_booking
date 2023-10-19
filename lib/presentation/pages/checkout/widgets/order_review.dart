@@ -9,20 +9,8 @@ class OrderReview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExpansionTile(
-          collapsedIconColor: CustomColor.whiteColor, 
-     iconColor: CustomColor.whiteColor,
-      collapsedBackgroundColor: CustomColor.containerColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0), // Adjust the radius as needed
-      ),
-      backgroundColor: CustomColor.containerColor,
-      collapsedShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0), // Adjust the radius as needed
-      ),
-      expandedAlignment: Alignment.topLeft,
-      childrenPadding: const EdgeInsets.all(8.0),
-      title: Text('Order Review', style: CustomTextStyle.labelTextStyle),
+    return Column(
+
       children: [
         const SizedBox(height: 10,),
         SingleChildScrollView(

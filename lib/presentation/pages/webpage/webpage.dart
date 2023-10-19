@@ -35,7 +35,10 @@ class CustomWebPage extends StatelessWidget {
       },
     ),
   )
-  ..loadRequest(Uri.parse(ApiConstants.baseUrl1 + endPoint));
+  ..loadRequest(
+    Uri.parse(
+      ApiConstants.baseUrl1 + endPoint
+      ));
 
     return SafeArea(
       child: Scaffold(
