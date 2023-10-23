@@ -15,7 +15,7 @@ class TicketTypeTile extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(
           color: CustomColor.containerColor,
-         // gradient: CustomColor.backGradient2,
+         /// gradient: CustomColor.backGradient2,
           borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
